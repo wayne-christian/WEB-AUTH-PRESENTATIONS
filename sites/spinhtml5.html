@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D HTML5 Logo</title>
+  <meta name="description" content="Making the HTML5 logo rotate in 3D space with CSS transformations">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<style>
+  *{margin:0;padding:0;font-size:15px;font-family:helvetica,arial,sans-serif}
+  footer,section,header{display:block;}
+  body { 
+    padding: 2em
+  }
+  #stage {
+        width: 350px;
+    height: 350px;
+    float: none;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+  }
+  h1{
+    font-family: futura,sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #666;
+    font-size: 32px;
+  }
+  form{
+     width: 235px;
+    float: left;
+    background: #ccc;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  form p{
+    padding: 0.5em 0;
+  }
+  button{
+    padding: 5px 10px;
+  }
+  label, span{
+    font-weight: bold;
+    padding: 0 0.5em;
+  }
+  fieldset{
+    border:none;
+  }
+  #logo img{
+    width:240px;
+    padding:20px;
+    display:block;
+  }
+  footer{clear:both;}
+</style>
+</head>
+<body>
+  <header></header>
+  <section id="stage">
+    <div id="logo" class="spin">
+      <img src="HTML5_Logo.png"  alt="HTML5 logo">
+    </div>
+  </section>
+  <aside style=""><form></form></aside>
+  <footer></footer>
+
+<script>
+  var formstr = '<fieldset><legend>Rotation values (in degrees)</legend>'+
+                '<p><label for="rotatex">X-rotation:</label>'+
+                '<input type="range" id="rotatex" value="0" min=0'+
+                ' max=360></p>'+
+                '<p><label for="rotatey">Y-rotation:</label>'+
+                '<input type="range" id="rotatey" value="0" min=0'+
+                ' max=360></p>'+
+                '<p><label for="rotatez">Z-rotation:</label>'+
+                '<input type="range" id="rotatez" value="0" min=0'+
+                ' max=360></p>'+
+                '<p><button id="spin">stop spinning</button></p>'+
+                '</fieldset>';
+  var pfx = '',
+      spin = true;
+
+  var form = document.querySelector('form');
+
+  if (checksupport()) {
+    form.innerHTML = formstr;
+    var logo = document.querySelector('#logo'),
+        x = document.querySelector('#rotatex'),
+        y = document.querySelector('#rotatey'),
+        z = document.querySelector('#rotatez'),
+        b = document.querySelector('#spin'),
+        canrange = (x.type === 'range');
+
+    if (canrange) {
+      x.parentNode.appendChild(document.createElement('span'));
+      y.parentNode.appendChild(document.createElement('span'));
+      z.parentNode.appendChild(document.createElement('span'));
+    }
+
+    b.addEventListener('click', function(ev) {
+      if (spin === true) {
+        this.innerHTML = 'start spinning';
+        logo.className = '';
+        spin = false;
+      } else {
+        this.innerHTML = 'stop spinning';
+        logo.className = 'spin';
+        spin = true;
+      }
+      ev.preventDefault();
+    } ,false);
+
+    form.addEventListener('change', function(ev) {
+      logo.className = '';
+      spin = false;
+      b.innerHTML = 'start spinning';
+      transform = 'rotateX('+ x.value +'deg) rotateY('+ y.value +'deg)'+
+                  ' rotateZ('+ z.value +'deg)';
+      logo.style.MozTransform = logo.style.WebkitTransform = 
+      logo.style.oTransform = logo.style.MsTransform =
+      logo.style.transform = transform;
+      if (canrange) {
+        x.nextSibling.innerHTML = x.value;
+        y.nextSibling.innerHTML = y.value;
+        z.nextSibling.innerHTML = z.value;
+      }
+    } ,false);
+    
+    var s = '';
+    styles = document.createElement('style');
+    s += '#stage{-'+ pfx +'-perspective: 300px;}'+
+         '#logo{-'+ pfx +'-transform-style: preserve-3d;position:relative;}'+
+         '#logo.spin{-'+ pfx +'-animation: spin 3s infinite linear;}'+
+         '@-'+ pfx +'-keyframes spin {'+
+         '0% {'+ 
+         '-'+ pfx +'-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);'+ 
+         '}'+
+         '100% {'+ 
+         '-'+ pfx +'-transform: rotateX(0deg) rotateY(360deg)'+
+         ' rotateZ(360deg);'+ 
+         '}}';
+     styles.innerHTML = s;
+     document.querySelector('head').appendChild(styles);
+    
+  }
+  
+  function checksupport() {
+    var props = ['perspectiveProperty', 'WebkitPerspective',
+                 'MozPerspective', 'OPerspective', 'msPerspective'],
+        i = 0,
+        support = false;
+    while (props[i]) {
+      if (props[i] in form.style) {
+        support = true;
+        pfx = props[i].replace('Perspective','');
+        pfx = pfx.toLowerCase();
+        break;
+      }
+      i++;
+    } 
+    return support;
+  }
+</script>
+</body>
+</html>

@@ -7,46 +7,51 @@ Reveal.initialize({
 	history: true,
 	center: true,
 	width: '80%',
-    height: '100%',
+	height: '100%',
 
 	transition: 'concave', // none/fade/slide/convex/concave/zoom
 	dependencies: [{
-		src: 'lib/js/classList.js',
-		condition: function () {
-			return !document.body.classList;
+			src: 'lib/js/classList.js',
+			condition: function () {
+				return !document.body.classList;
+			}
+		}, {
+			src: 'plugin/markdown/marked.js',
+			condition: function () {
+				return !!document.querySelector('[data-markdown]');
+			}
+		}, {
+			src: 'plugin/markdown/markdown.js',
+			condition: function () {
+				return !!document.querySelector('[data-markdown]');
+			}
+		}, {
+			src: 'plugin/highlight/highlight.js',
+			async: true,
+			callback: function () {
+				hljs.initHighlightingOnLoad();
+			}
+		}, {
+			src: 'plugin/zoom-js/zoom.js',
+			async: true
+		}, {
+			src: 'plugin/notes/notes.js',
+			async: true
+		},
+		{
+			src: 'plugin/live-coding/live-coding.js',
+			async: true,
+			condition: function () {
+				return !!document.body.classList;
+			}
+		}, 
+		{
+			src: 'plugin/menu/menu.js'
 		}
-	}, {
-		src: 'plugin/markdown/marked.js',
-		condition: function () {
-			return !!document.querySelector('[data-markdown]');
-		}
-	}, {
-		src: 'plugin/markdown/markdown.js',
-		condition: function () {
-			return !!document.querySelector('[data-markdown]');
-		}
-	}, {
-		src: 'plugin/highlight/highlight.js',
-		async: true,
-		callback: function () {
-			hljs.initHighlightingOnLoad();
-		}
-	}, {
-		src: 'plugin/zoom-js/zoom.js',
-		async: true
-	}, {
-		src: 'plugin/notes/notes.js',
-		async: true
-	},{ 
-		 src: 'plugin/live-coding/live-coding.js', 
-		 async: true, 
-		 condition: function() { return !!document.body.classList; }
-	 }, { 
-		 src: 'plugin/menu/menu.js' 
-	 }
-				  
+
+
 	],
-	
+
 	menu: {
 		// Specifies which side of the presentation the menu will 
 		// be shown. Use 'left' or 'right'.
@@ -62,28 +67,27 @@ Reveal.addEventListener('salary', function () {
 });
 
 var entityMap = {
-  '&': '&amp;',
-  '<': '&lt;',
-  '>': '&gt;',
-  '"': '&quot;',
-  "'": '&#39;',
-  '/': '&#x2F;',
-  '`': '&#x60;',
-  '=': '&#x3D;'
+	'&': '&amp;',
+	'<': '&lt;',
+	'>': '&gt;',
+	'"': '&quot;',
+	"'": '&#39;',
+	'/': '&#x2F;',
+	'`': '&#x60;',
+	'=': '&#x3D;'
 };
 
-function escapeHtml (string) {
-  return String(string).replace(/[&<>"'`=\/]/g, function (s) {
-    return entityMap[s];
-  });
+function escapeHtml(string) {
+	return String(string).replace(/[&<>"'`=\/]/g, function (s) {
+		return entityMap[s];
+	});
 }
 
-$( document ).ready(function() {
+$(document).ready(function () {
 	console.log('ready');
-/*$( "code" ).each(function( index ) {
-	console.log($( this ).html());
- //escapeHtml($( this ).html() );
-	
-});*/
+	/*$( "code" ).each(function( index ) {
+		console.log($( this ).html());
+	 //escapeHtml($( this ).html() );
+		
+	});*/
 });
-

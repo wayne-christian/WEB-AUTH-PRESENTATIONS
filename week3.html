@@ -1,0 +1,594 @@
+<!doctype html>
+<html>
+		<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Week 2: Intro to HTML & CSS</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		</head>
+		<body>
+<div class="reveal">
+          <div class="slides">
+    <section data-background-transition="convex" data-background="#333333">
+              <h2 >Hello</h2>
+              <p style="color:#F8AA00">(Web Authoring CMP1130M)</p>
+            </section>
+    <section data-background-transition="convex" data-background-video="assets/week1assets/rainingcode.mp4" data-background-video-loop="loop">
+              <h3 >Wayne Christian</h3>
+              <p style="color:#F8AA00">Designer, Developer, Director & Senior Lecturer</p>
+            </section>
+    <section data-background-iframe="http://adigitalengagement.co.uk/html5/" data-background-interactive data-background="#eeeeee">
+              <p style="color: #222222; padding-bottom: 60px">Todays Lecture<br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </p>
+            </section>
+    <section data-background-transition="convex">
+    	<p><img src="assets/week2assets/sticky7.JPG"/></p>
+    </section>
+    <section data-background-transition="convex">
+    	<p><img src="assets/week2assets/sticky2.JPG"/></p>
+    </section>
+    <section data-background-transition="convex">
+    	<p><img src="assets/week2assets/sticky5.JPG"/></p>
+    </section>
+    <section data-background-transition="convex">
+    	<p><img src="assets/week2assets/sticky3.JPG"/></p>
+    </section>
+    <section data-background-iframe="https://codepen.io/Yakudoo/full/yNjRRL/" data-background-interactive> </section>
+    <section data-background-transition="convex">
+    	<p><img src="assets/week2assets/sticky6.JPG"/></p>
+    </section>
+    <section data-background-transition="convex" data-background="#333">
+              <p><img style="width: 50%; height: auto" src="assets/week2assets/cough.jpeg"/></p>
+            </section>
+    <section data-background-transition="convex">
+              <h3>Recap</h3>
+            </section>
+    <section data-background-transition="convex" data-background="#ff0000">
+              <h3>Recap</h3>
+              <p >Last week we looked at</p>
+              <p class="fragment tight bullet">Setting up a site Cache</p>
+              <p class="fragment tight bullet">Basic Html structures and syntax<br>
+        i.e body, h1, p etc</p>
+              <p class="fragment tight bullet">Basic CSS Syntax targeting those tags</p>
+              <p class="fragment tight bullet">CSS Syntax for basic styling</p>
+            </section>
+    <section data-background-transition="convex">
+              <h3>Workshop Observations</h3>
+            </section>
+    <section data-background-transition="convex" data-background="lightblue">
+              <h3>Observations</h3>
+              <p class="fragment tight bullet">Syntax difference</p>
+              <p class="fragment tight bullet">Linking a style sheet</p>
+              <p class="fragment tight bullet">Relative paths</p>
+              <p class="fragment tight bullet">Typing ConsisTanTly</p>
+              <p class="fragment tight bullet">Making S!*t up</p>
+            </section>
+    <section data-background-transition="convex" data-background="#3f3f3f">
+              <h3>Syntax difference</h3>
+              <p>HTML is</p>
+              <br>
+              <br>
+              <h2>
+        <pre><code style="font-size: 40%; line-height: normal">&lt;tagname&gt; content &lt;/tagname&gt;</code></pre>
+      </h2>
+            </section>
+    <section data-background-transition="convex" data-background="#3f3f3f">
+              <h3>Syntax difference</h3>
+              <p>CSS is</p>
+              <br>
+              <br>
+              <h2>
+        <pre><code style="font-size: 40%; line-height: normal">
+tag, #id, .class, class selector
+{
+	text-align:center;
+	font-size:1em;
+}
+
+</code></pre>
+      </h2>
+            </section>
+    <section data-background-transition="convex" data-background="#3f3f3f">
+              <h3>Syntax difference</h3>
+              <p>NOT a combination</p>
+              <h3>
+        <pre><code style="font-size: 40%; line-height: normal">
+&lt;body&gt;
+{
+	text-align:center;
+	font-size:1em;
+}
+
+</code></pre>
+      </h3>
+              <p class="fragment small">(granted I had a typo in the morning)</p>
+            </section>
+    <section data-background-transition="convex" data-background="rgb(77, 126, 101)">
+              <h3>Linking a style sheet</h3>
+              <p><code>&lt;link rel="stylesheet" type="text/css" href="css/custom.css"&gt;</code></p>
+              <p class="fragment">In the example above, the &lt;link&gt; tag has three attributes: rel (relationship), type, and href (hypertext reference).</p>
+              <p class="fragment">if this is malformed i.e <strong>rel="style"</strong> it will not load in correctly.</p>
+            </section>
+    <section data-menu-title="Relative paths">
+              <h3>Relative paths</h3>
+            </section>
+    <section data-menu-title="Folder structure" data-background="assets/week1assets/structure.jpg"> </section>
+    <section data-background-transition="convex" data-background="#7569a9">
+              <h3>Relative paths</h3>
+              <p>Remember that links, files and images are relative to the document being displayed by the server i.e "&#47;assets&#47;image.jpg" or "&#47;css&#47;styles.css"</p>
+              <p class="fragment tight bullet">No "cdrive&#47;wayne&#47;desktop&#47;site"</p>
+              <p class="fragment tight bullet">No "bloody&#92;backslash&#92;paths&#92;to&#92;files"</p>
+              <p class="fragment tight bullet">We use "&#47;" to go forward or</p>
+              <p class="fragment tight bullet"> "&#46&#46&#47;" to go back one folder</p>
+            </section>
+    <section data-background-transition="convex" data-background="#5f86bae">
+              <h3>Typing ConsisTanTly</h3>
+              <p>Be consistent and remember your naming conventions</p>
+              <p class="fragment tight bullet">NameThings in CamelCase</p>
+              <p class="fragment tight bullet">or Capitalisation</p>
+              <p class="fragment tight bullet">or replace_spaces_with_underscore</p>
+              <p class="fragment tight bullet">watch out for typo's &lt;img <strong>scr</strong>="image.jpg" (src)</p>
+            </section>
+    <section data-background-transition="convex" data-background="#4ba2c3">
+              <h3>Making S!*t up!</h3>
+              <p>Tags are not dynamic; you can not make them up for example</p>
+              <p class="fragment"><code>&lt;p1&gt; stuff &lt;/p1&gt;</code></p>
+              <p class="fragment"><code>&lt;random_name&gt; stuff &lt;/random_name&gt;</code></p>
+              <p class="small fragment">(I love the logic and resourcefulness)</p>
+              <p class="fragment">Tags are standardised or predefined<br>
+        <span class="small">We will look into this in later slides</span> </p>
+            </section>
+    <section data-background-transition="convex" data-background-video="assets/week2assets/logical.mp4"> </section>
+    <section data-background-transition="convex" data-background="#4abbcc">
+              <h3>Today</h3>
+              <p >We will look at</p>
+              <p class="fragment tight bullet" style="">html 5 &amp; its specific tags</p>
+              <p class="fragment tight bullet" style="">html5 vs html4 (mta)</p>
+              <p class="fragment tight bullet" style="">html5 Semantic Elements</p>
+              <p class="fragment tight bullet" style="">html5 features</p>
+              <p class="fragment tight bullet" style="">Tag, ID, Class, inline styles</p>
+<!--              <p class="fragment tight bullet" style="">selectors &amp; Pseudo-classes</p>-->
+              <p class="fragment tight bullet" style="">Assesment briefing doc</p>
+              <p class="fragment tight bullet" style="">The CRG</p>
+            </section>
+    <section data-background-transition="convex" data-background-video="assets/week2assets/celebration.mp4"> </section>
+    <section data-background="#ff0000">
+              <h3>Common HTML tags.</h3>
+              <p>Last week we briefly looked at 3 common tags to get you started.</p>
+              <p class="fragment"><code>&lt;section&gt;</code> used to specify a new section</p>
+              <p class="fragment"><code>&lt;h1&gt;</code> specifies heading text, good for page titles</p>
+              <p class="fragment"><code>&lt;p&gt;</code> specifies paragraph text, good for body text</p>
+              <p class="fragment"><code>&lt;img&gt;</code> displays an image specified by a src (source file)</p>
+            </section>
+    <section data-background="#eeeeee">
+              <p><img src="assets/week2assets/HTML5_Logo.png"/></p>
+            </section>
+    <section data-background="#d67382">
+              <h3>Html5</h3>
+              <p>HTML5 has many new syntactical features. HTML5 comes with &lt;audio&gt;, &lt;video&gt; and &lt;canvas&gt; elements as well as integration of SVG content. With these new elements it is easy to integrate multimedia and graphical content to web without using flash and third party plugins.</p>
+              <p>HTML5 elements enrich the semantic value of the document</p>
+            </section>
+    <section data-background="#f08572">
+              <h3>What are Semantic Elements?</h3>
+              <p class="fragment">A semantic element clearly describes its meaning to both the browser and the developer, for example</p>
+            </section>
+    <section data-background="#f69d6d">
+              <h3>Examples of semantic elements.</h3>
+              <p class="fragment"><code>&lt;header&gt;</code></p>
+              <p class="fragment"><code>&lt;footer&gt;</code></p>
+              <p class="fragment"><code>&lt;nav&gt;</code></p>
+              <p class="fragment"><code>&lt;menu&gt;</code></p>
+              <p class="fragment"><code>&lt;article&gt;</code></p>
+              <p class="fragment"><code>&lt;section&gt;</code></p>
+              <p class="small fragment"><a  style="color: white" href="assets/week2assets/cheatsheet.pdf" target="_blank">html5 cheat sheet</a></p>
+            </section>
+    <section data-background="#ff0000">
+              <h3>Examples of non-semantic elements</h3>
+              <p class="fragment"><code>&lt;div&gt;</code></p>
+              <p class="fragment"><code>&lt;span&gt;</code></p>
+              <p class="fragment">- which tells us nothing about its content.</p>
+            </section>
+    <section data-menu-title="Pair Tags" data-background="#3f3f3f">
+              <h3>Remember</h3>
+              <p><strong>*Most Tags</strong> work in pairs.(img tag is self closing)</p>
+              <pre>
+<code>
+&lt;element&gt; &lt;/element&gt;
+&lt;img src="linktoimage.jpg" /&gt;
+</code></pre>
+            </section>
+    <section data-background="#3f3f3f" data-menu-title="comparison" class="flexbox-container">
+              <div class="collumn" style="width: 50%">
+        <p>div with ID's</p>
+        <pre><code style="font-size: 45%; line-height: normal">
+&lt;div id=&quot;header&quot;&gt;
+ &lt;ul id=&quot;nav&quot;&gt;
+ &lt;/ul&gt;
+&lt;/div&gt;&lt;!-- End #header --&gt;
+&lt;div id=&quot;content&quot;&gt;
+ &lt;div id=&quot;blogpost&quot;&gt;
+  &lt;h1&gt;This is my Blogpost&lt;/h1&gt;
+   &lt;p&gt;This is my first paragraph.&lt;/p&gt;
+  &lt;/div&gt;&lt;!-- End #blogpost --&gt;
+&lt;/div&gt;&lt;!-- End #content --&gt;
+&lt;div id=&quot;sidebar&quot;&gt;
+ &lt;div id=&quot;blogroll&quot;&gt;
+  &lt;p&gt;My blogroll Content.&lt;/p&gt;
+ &lt;/div&gt;&lt;!-- End #blogroll --&gt;
+&lt;/div&gt;&lt;!-- End #sidebar --&gt;
+&lt;div id=&quot;footer&quot;&gt;
+	&lt;p&gt;My Footer Content.&lt;/p&gt;
+&lt;/div&gt;&lt;!-- End #footer --&gt;
+</code>
+</pre>
+      </div>
+              <div class="collumn" style="width: 50%">
+        <p>Semantic mark up</p>
+        <pre><code style="font-size: 45%; line-height: normal">
+&lt;header&gt;
+ &lt;nav&gt;&lt;/nav&gt;
+&lt;/header&gt;
+&lt;div id=&rdquo;content&rdquo;&gt;
+ &lt;article id=&quot;blogpost&quot;&gt;
+  &lt;section&gt;
+	&lt;h1&gt;This is my Blogpost&lt;/h1&gt;
+	 &lt;p&gt;This is my first paragraph.&lt;/p&gt;
+  &lt;/section&gt;
+ &lt;/article&gt;&lt;!-- End #blogpost --&gt;
+&lt;/div&gt;&lt;!-- End #content --&gt;
+&lt;div id=&rdquo;sidebar&rdquo;&gt;
+ &lt;aside id=&quot;blogroll&quot;&gt;
+  &lt;p&gt;My blogroll Content.&lt;/p&gt;
+ &lt;/aside&gt;&lt;!-- End #blogroll --&gt;
+&lt;/div&gt;&lt;!-- End #sidebar --&gt;
+&lt;footer&gt;
+ &lt;p&gt;My Footer Content.&lt;/p&gt;
+&lt;/footer&gt;
+             </code>
+             </pre>
+      </div>
+            </section>
+    <section data-background="#f08572">
+              <h3>Semantic explaination</h3>
+              <p class="small">Very quick - and should be self-explanatory</p>
+            </section>
+    <section data-background="#ff0000">
+              <h3>The &lt;header&gt; Element</h3>
+              <p class="fragment">The header element is used to contain the header elements of any block of related content. For example, the global header for a website that contains a sites logo and or navigation would be a basic example of where to use this tag.</p>
+            </section>
+    <section data-background="#ff0000">
+              <h3>The &lt;footer&gt; Element</h3>
+              <p class="fragment">This element is used in the same way as the header element but for common footer elements of a block of related content. An example of this would be the utility links on the footer of a site.</p>
+            </section>
+    <section data-background="#ff0000">
+              <h3>The &lt;nav&gt; Element</h3>
+              <p class="fragment">This one is fairly simple but it can also be abused. This is intended to define major navigation areas on a page, and in most cases, will be groups of links. Be aware that just because several links might be in proximity of each other does not qualify the use of the &lt;nav&gt;element. </p>
+            </section>
+    <section data-background="#ff0000">
+              <h3>The &lt;menu&gt; Element</h3>
+              <p class="fragment"> This element is similar to the &lt;nav&gt; element but is a more relaxed fashion. This element might be used to group together links that act as a sub-navigation. Another user would be for social media icons that link out to a site’s social media pages.</p>
+            </section>
+    <section data-background="#ff0000">
+              <h3>The &lt;article&gt; Element</h3>
+              <p class="fragment">This element is used for self-contained compositions of a webpage. For example, a list of your site’s blog posts each would be contained by an &lt;article&gt; tag. This can also be used for other types of content as well. Just keep in mind its self-contained use.</p>
+            </section>
+    <section data-background="#ff0000">
+              <h3>The &lt;section&gt; Element</h3>
+              <p class="fragment"> The &lt;section&gt; element is commonly misused. Most people would think of using the section tag as a container block level element to contain a portion of the site. This is incorrect.</p>
+            </section>
+    <section data-background="#7569a9">
+              <h3>HTML5 advantages *MTA</h3>
+              <p class="fragment">The following are the advantages of HTML5.</p>
+            </section>
+    <section data-background="#7569a9">
+              <h3>1) Cleaner markup/ Improved code:</h3>
+              <p class="fragment"> HTML5 will enable web designers to use cleaner, neater code. We can remove div tags and replace them with semantic HTML5 elements</p>
+            </section>
+    <section data-background="#7569a9">
+              <h3>2) Elegant forms:</h3>
+              <p class="fragment"> HTML5 enables designer to use fancier forms. There will be different type of inputs, search and different fields for different purpose.</p>
+            </section>
+    <section data-background="#7569a9">
+              <h3>3) Consistency:</h3>
+              <p class="fragment">As websites will adopt the new HTML5 elements we will see more consistency in terms of HTML used to code a web page on one site compared to another. This will make it much easier for designers and developers to immediately understand how a web page is created.</p>
+            </section>
+    <section data-background="#7569a9">
+              <h3>4) Supports rich media elements:</h3>
+              <p class="fragment">HTML5 has an inbuilt capability to play audio and video and so we can bid goodbye to those plugin tags.</p>
+            </section>
+    <section data-background="#7569a9">
+              <h3>5) Offline Application Cache:</h3>
+              <p class="fragment"> HTML5 offers an offline application cache facility which will load the page the user has visited even if the user is temporarily offline. This feature will help the files to load much faster and reduces load on server.</p>
+            </section>
+    <section data-background="#7569a9">
+              <h3>HTML5 Features *MTA</h3>
+              <p>The following is a short list of these new features and brief description:</p>
+              <p class="small">Can you name some?</p>
+            </section>
+    <section data-background="#fbbb6c">
+              <h3>1) Audio and video tags:</h3>
+              <p class="fragment">Embeds audio and video multimedia using the HTML5 markup tags</p>
+            </section>
+    <section data-background="#fbbb6c">
+              <h3>2) Canvas: </h3>
+              <p class="fragment">An HTML5 element that creates a container for graphics, and uses JavaScript to draw the graphics as needed. </p>
+            </section>
+    <section data-background="#fbbb6c">
+              <h3>3) Media Queries:</h3>
+              <p class="fragment"> A CSS3 feature that detects the user’s type of screen and sizes the output accordingly. </p>
+            </section>
+    <section data-background="#fbbb6c">
+              <h3>4) New application programming interfaces (APIs):</h3>
+              <p class="fragment">Give apps access to a plethora of resources, such as files, webcams, and hardware-accelerated animations. </p>
+            </section>
+    <section data-background="#fbbb6c">
+              <h3>5) Geolocation:</h3>
+              <p class="fragment">Uses JavaScript to detect the location (geographic positioning) of a client device, whether it’s a Windows Phone, Android phone, or a PC. </p>
+            </section>
+    <section data-background="#fbbb6c">
+              <h3>6) Modernizr:</h3>
+              <p class="fragment">Modernizr: A JavaScript library that helps you deliver the new capabilities of HTML5 and CSS3 in older browsers.(Worth looking at)</p>
+            </section>
+    <section data-background="#fbbb6c">
+              <h3>Escape &amp; Special Characters</h3>
+              <p class="fragment">In HTML, some characters are reserved for the code, like brackets
+        (< >), ampersands ( &amp;), and quotes (“ and ‘). Other characters, like
+        em  &amp; en dashes, em spaces, curly quotes, copyright symbols,
+        fractions, etc, are not included in the “standard” character sets.</p>
+              <p class="fragment"> In
+        both cases, you work around this by using special codes that will
+        translate into those characters in the browser. Next the top 5 rows are the ones
+        you will probably use the most:</p>
+            </section>
+    <section data-background-iframe="https://dev.w3.org/html5/html-author/charref" data-background-interactive> </section>
+    <section data-background="#fbbb6c">
+              <h3>Html element attributes</h3>
+              <p>Attributes provide additional information about HTML elements.</p>
+              <p class="fragment tight">All HTML elements can have attributes</p>
+              <p class="fragment tight">Attributes provide additional information about an element</p>
+              <p class="fragment tight">Attributes are always specified in the start tag</p>
+              <p class="fragment tight">Attributes usually come in name/value pairs like: <strong>name="value"</strong></p>
+            </section>
+    <section data-background="#fbbb6c">
+              <h3>Attribute Examples</h3>
+              <p>Here a few examples</p>
+              <p class="fragment tight">The <strong>title</strong> attribute provides additional "tool-tip" information</p>
+              <p class="fragment tight">The <strong>href</strong> attribute provides address information for links</p>
+              <p class="fragment tight">The <strong>alt</strong> attribute provides text for screen readers</p>
+              <p class="fragment tight">however for CSS we will focus on...</p>
+            </section>
+    <section data-background="#fbbb6c">
+              <h3>id, class and inline styles</h3>
+              <p>Here a few examples</p>
+              <p class="fragment tight">The <strong>id</strong> (#) attribute specifies a unique id for an HTML element (the value must be unique within the HTML document). </p>
+              <p class="fragment tight">The <strong>class</strong> (.) attribute specifies one or more classnames for an element.</p>
+              <p class="fragment tight">The <strong>style</strong> attribute The style attribute specifies an inline style for an element.</p>
+            </section>
+    <section data-background="#fbbb6c">
+              <h3 class="">The style attribute will override any style set globally, e.g. styles specified in the in an internal or external style sheet</h3>
+              <p class="fragment">This can be overided with !important<br>(discussed later)</p>
+            </section>
+    <section data-background-transition="convex" data-background-video="assets/week2assets/explodingNinja.mp4"></section>
+    
+    <section data-background="#fbbb6c">
+              <h3 class="">Styling</h3>
+            
+            </section>
+            
+    <section data-background-iframe="http://adigitalengagement.co.uk/html5/spincss3.html" data-background-interactive data-background="#eeeeee">
+              <p style="color: #222222; padding-bottom: 60px">CSS3<br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </p>
+            </section>
+    <section data-background="#fbbb6c">
+              <h3>Inline, ID(#), class(.) or tag(div)</h3>
+              <pre><code>
+&lt;section id=&quot;uniqueid&quot; class=&quot;reuseableclass&quot; style=&quot;inlinestyles&quot;&gt;&lt;/section&gt;				
+					
+</code></pre>
+              <p class="fragment">Styles are applied with different <strong>specificity</strong></p>
+              <p class="fragment">Specificity is the means by which browsers decide which CSS property values are the most relevant to an element and, therefore, will be applied. Specificity is based on the matching rules which are composed of different sorts of CSS selectors</p>
+            </section>
+    <section> </section>
+    
+    <!--    live section-->
+    
+    
+    <section data-background="#3f3f3f">
+              <h3>ID</h3>
+              <pre><code> 
+&lt;p id=&quot;uniqueid&quot; &gt;Hello&lt;/p&gt;
+
+#uniqueid
+{
+}
+</code></pre>
+              <p>id is represented by <strong>#</strong></p>
+              <p>It should be unique</p>
+            </section>
+    <section data-background="#3f3f3f">
+              <h3>Class</h3>
+              <pre><code> 
+&lt;p class=&quot;myclass&quot;&gt;Hello&lt;/p&gt;
+
+.myclass
+{
+}
+</code></pre>
+              <p>class is represented by <strong>.</strong></p>
+              <p>It is designed to be reused</p>
+            </section>
+    <section data-background="#fbbb6c">
+              <h3>The !important exception</h3>
+              <p class="fragment">When an important rule is used on a style declaration, this declaration overrides any other declarations.</p>
+              <p class="fragment">Using !important, however, is bad practice and should be avoided because it makes debugging more difficult by breaking the natural cascading in your stylesheets</p>
+            </section>
+    <section data-background="#fbbb6c">
+              <h3>Compound selector</h3>
+              <p class="fragment">A compound selector can mix the previous 3 types using more than one class, ID and/or tag</p>
+              <p class="fragment">This type of selector has a higher priority (specificity)</p>
+              <pre><code>
+mytag #myid .myclass{
+background-color:red;
+}
+</code></pre>
+            </section>
+            
+             <section data-background="#3f3f3f">
+              <h3>Styling conventions</h3>
+              <p>Apply multiple classes</p>
+              <pre><code> 
+&lt;p class=&quot;myclass otherclass extraclass&quot;&gt;Hello&lt;/p&gt;
+
+.myclass
+{
+}
+.otherclass
+{
+}
+.extraclass
+{
+}
+</code></pre>
+              
+   
+            </section>
+            
+            <section data-background="#3f3f3f">
+              <h3>Styling conventions</h3>
+              <p>Efficiency</p>
+              <pre><code> 
+
+.h1, h2, h3, h4 
+{
+font-family:"helevetica";
+}
+
+</code></pre>
+              
+   
+            </section>
+            
+     <section data-background="#fbbb6c">
+              <h3>Live examples</h3>
+			  </section>       
+   <section data-background="#3f3f3f" class="flexbox-container">
+              <div class="collumn">
+        <p>HTML</p>
+        <pre><code class="liveCoding xml" data-livecoding-id="myElement" contenteditable style="font-size: 40%; line-height: normal">
+&lt;h1&gt;Boom!&lt;/h1&gt;
+
+&lt;p class=&quot;title&quot;&gt;Hello&lt;/p&gt;
+
+&lt;img src=&quot;assets/week1assets/html_tattoo.png&quot;/&gt;
+</code>
+</pre>
+      </div>
+              <div class="collumn">
+        <p>CSS</p>
+        <pre><code class="liveCoding css" data-livecoding-id="myElement" contenteditable style="font-size: 40%; line-height: normal">
+h1{
+	text-align:center;
+	font-size:1em;
+}
+	
+.title{
+	color: red;
+}
+  
+img{
+	width:150px;
+	height:auto;
+}
+</code></pre>
+      </div>
+              <div class="collumn">
+        <p>Output</p>
+        <div id="myElement">
+                  <h1>Boom!</h1>
+                  <p class="title">Hello</p>
+                  <img src="assets/week1assets/week1assets/week1assets/html_tattoo.png"/> </div>
+      </div>
+            </section>
+    <section data-menu-title="css examples">
+              <h2>Can I Use?</h2>
+              <p>for A good resource to check interoperability and compatibility</p>
+              <p class="small"><a href="http://caniuse.com/" target="_blank">http://caniuse.com/</a></p>
+            </section>
+    <section data-background-iframe="http://caniuse.com/
+" data-background-interactive> </section>
+    <section data-menu-title="css examples">
+              <h2>Some CSS3 Examples</h2>
+            </section>
+    <section data-background-iframe="https://threejs.org/examples/css3d_periodictable.html" data-background-interactive> </section>
+    <section data-background-iframe="http://bennettfeely.com/csscreatures/" data-background-interactive> </section>
+    <section data-background-iframe="http://www.bluedashed.com/covers/" data-background-interactive> </section>
+    
+    <section data-background-iframe="https://codepen.io/Sonick/full/vijJl/" data-background-interactive> </section>
+    <section data-background-iframe="https://www.clicktorelease.com/code/css3dclouds/" data-background-interactive> </section>
+    <section data-background-iframe="https://codepen.io/fbrz/full/whxbF/" data-background-interactive> </section>
+    <section data-background-iframe="http://media.24ways.org/2009/15/space.html" data-background-interactive> </section>
+    <section data-background-iframe="https://codepen.io/juliangarnier/full/idhuG/" data-background-interactive> </section>
+    <section data-menu-title="First page" data-background="">
+              <h3>Thursdays Session</h3>
+              <p class="fragment">Setting up site cache</p>
+              <p class="fragment">Creating a web page</p>
+              <p class="fragment">Setting up Azure</p>
+              <p class="fragment">Uploading (FTP / File explorer PC)</p>
+            </section>
+  </div>
+        </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="lib/js/head.min.js"></script> 
+<script src="js/reveal.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="https://code.highcharts.com/highcharts.js"></script> 
+<script src="https://code.highcharts.com/highcharts-more.js"></script> 
+<script src="https://code.highcharts.com/modules/solid-gauge.js"></script> 
+<script src="js/themes/mypbtheme.js"></script> 
+<script src="js/jquery.animateNumber.min.js"></script> 
+<script src="js/main.js"></script> 
+<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+</body>
+</html>

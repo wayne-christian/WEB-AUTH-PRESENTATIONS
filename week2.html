@@ -1,0 +1,373 @@
+<!doctype html>
+<html>
+		<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Week 2: Intro to HTML & CSS</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		</head>
+		<body>
+<div class="reveal">
+          <div class="slides">
+    <section data-background-transition="convex" data-background="#333333">
+              <h2 >Hello</h2>
+              <p style="color:#F8AA00">(Web Authoring CMP1130M)</p>
+            </section>
+    <section data-background-transition="convex" data-background="#333333">
+              <h3 >Wayne Christian</h3>
+              <p style="color:#F8AA00">Designer, Developer, Director & Senior Lecturer</p>
+            </section>
+			  <section data-background-transition="convex" data-background="assets/week1assets/ryme1.jpg"></section>
+			  <section data-background-transition="convex" data-background="assets/week1assets/social1.jpg"></section>
+			  <section data-background-transition="convex" data-background="assets/week1assets/reveal1.jpg"></section>
+    <section data-background-transition="convex" data-background-video="assets/week1assets/rainingcode.mp4" data-background-video-loop="loop">
+              <h2 style="color:#F8AA00">HTML </h2>
+              <p>(Hyper Text Markup Language)</p>
+              <h3 style="color:red">&</h3>
+              <h2 style="color:#F8AA00">CSS </h2>
+              <p>(Cascading Style Sheet)</p>
+            </section>
+            
+            <section data-background-transition="convex"> 
+            <h3>Most of you are probably here?</h3>
+            </section>
+            <section data-background-transition="convex" data-background-video="assets/week1assets/intel.mp4"> 
+           
+            </section>
+            <section data-background-transition="convex" data-background="#ff0000"> 
+            <h3>Lets get you to here!</h3>
+            </section>
+            <section data-background-transition="convex" data-background-video="assets/week1assets/matrix.mp4"> </section>
+            
+    
+    <section data-background-transition="convex" data-background="lightblue">
+              <h3>Lecture Overview</h3>
+              <p >Today we are going to talk about</p>
+              <p class="fragment">How the 'interweb' works!</p>
+              <p class="fragment">What is HTML & CSS (JS in week 5)</p>
+              <p class="fragment">History of HTML</p>
+              <p class="fragment">Looking at Structures and Syntax</p>
+              <p class="fragment">Setting up a site Cache</p>
+              
+            </section>
+  
+            
+            
+    
+    <section data-background-transition="convex" data-background="">
+              <h2 >How the 'interweb' works!</h2>
+		<p>Computers connected to the web are called <strong>clients</strong> and <strong>servers</strong>. A simplified diagram of how they interact might look like this:</p>
+            </section>
+            
+            <section data-background-transition="convex" data-background="assets/week1assets/how-internet-works.jpg">
+              
+            </section>
+            
+            <section data-background-transition="convex" data-background="">
+              <h2 >Clients</h2>
+		
+		<p>Clients are the typical web user's internet-connected devices (for example, your computer connected to your Wi-Fi, or your phone connected to your mobile network) and web-accessing software available on those devices (usually a web browser like Firefox or Chrome).</p>
+            </section>
+            
+            <section data-background-transition="convex" data-background="">
+				<h2 >Servers <span class="small">(Azure)</span></h2>
+		<p>Servers are computers that store webpages, sites, or apps. When a client device wants to access a webpage, a copy of the webpage is downloaded from the server onto the client machine. The server sends the website's files to the browser as a series of small chunks called data packets via a http request. This is displayed in the user's web browser.</p>
+            </section>
+            
+
+    <section data-background-transition="convex" data-background="">
+              <h2 >HTTP Architecture </h2>
+              <p>Hypertext Transfer Protocol<br>
+				  <span class="small">(The basis upon which the web is built)</span></p>
+		<p class="fragment">HTTP was originally proposed by Tim Berners-Lee, the pioneer of the World Wide Web who designed the application protocol with simplicity in mind, to perform high-level data communication functions between Web-servers and clients</p>
+            </section>
+    <section data-background-transition="convex" data-background="">
+		<h2 >HTTP 1.0 <span class="small">(slooooow)</span></h2>
+              <p class="fragment"> Is a protocol for request response in a client-server model </p>
+              <p class="fragment">HTTP was designed for requesting documents </p>
+              <p class="fragment">HTTP 1.0 was fine for a single document request from the server (As the web grew, quicker response times were needed) </p>
+              <p class="fragment">In HTTP 1.0 a separate connection was made for every request to the serve </p>
+            </section>
+    <section data-background-transition="convex" data-background="assets/week1assets/server1.jpg"> </section>
+    <section data-background-transition="convex" data-background="">
+		<h2>HTTP 1.1 <span class="small">(what you are prob using now)</span></h2>
+              <p class="fragment"> HTTP 1.1 added reusuable connections 
+        Browsers could initialize a connection to a web server to retrieve the html page, then reuse the same connection to retrieve resources, images and so on. </p>
+              <p class="fragment">Reduced latency, by reducing number of http connections required </p>
+            </section>
+    <section data-background-transition="convex" data-background="assets/week1assets/http1.jpg"> </section>
+    <section data-background-transition="convex" data-background="">
+		<h2 >HTTP2 <span class="small">(limited availability)</span></h2>
+              <p class="fragment">Parallel multiplexed requests and response do not block each other.</p>
+              <p class="fragment">A single TCP connection is used to ensure effective network resource utilization despite transmitting multiple data stream</p>
+              <p class="fragment">Reduced latency, faster web performance, better search engine rankings.</p>
+            </section>
+            <section data-menu-title="http1 vs 2 image" data-background-transition="convex" data-background="assets/week1assets/http1vshttp2.png"> </section>
+    <section data-menu-title="http2 mail image" data-background-transition="convex" data-background="assets/week1assets/http2mail.jpg"> </section>
+
+    
+        <section data-background-transition="convex" data-background="">
+              <h2 >On to HTML & CSS </h2>
+            </section>
+    <section data-background-transition="convex" data-background="">
+              <h2 >The History of HTML</h2>
+            </section>
+            <section data-background-transition="convex" data-background="assets/week1assets/timeline.jpg">
+            
+            </section>
+             <section data-menu-title="html start" data-background="#3f3f3f">
+              <p>When you look at a web page, you might wonder how it is made. To display a web page, your Internet browser reads and interprets a special set of instructions. These instructions are written primarily in two languages: HTML and CSS.</p>
+            </section>
+    
+    <section data-background-transition="convex" data-background="">
+              <h2 >What is HTML?</h2>
+		<h3>Hyper Text Markup Language.</h3>
+		<p class="fragment">What is Hyper Text?</p>
+<p class="fragment">What is a Markup Language?</p>
+            </section>
+            
+            <section data-background-transition="convex" data-background="">
+              <h3 >Hyper Text</h3>
+		<p class="fragment">Hypertext is text that links to other information. By clicking on a link in a hypertext document, a user can quickly jump to different content. Though hypertext is usually associated with Web pages, the technology has been around since the 1960s</p>
+            </section>
+            
+            <section data-background-transition="convex" data-background="">
+              <h3 >Markup</h3>
+		<p class="fragment">HTML is a type of markup language. It encapsulates, or “marks up” data within HTML tags, which define the data and describe its purpose on the webpage</p>
+
+            </section>
+            
+            <section  data-background-transition="convex" data-background="">
+
+				<h3>*Not a Programming Language</h3>
+				<p class="fragment">Programming languages have functional purposes. HTML, as a markup language doesn’t really “do” anything in the sense that a programming language does. HTML contains no programming logic</p>
+
+            </section>
+               
+            
+    <section data-menu-title="web page display" data-background-transition="convex" data-background="">
+              <p>Web pages display content and have an underlying structure defined by HTML. The content can include text, images, links, or even audio and video.</p>
+              <p> Most HTML elements are written using opening <code>&lt;element&gt;</code>and closing <code>&lt;/element&gt;</code></p>
+              <p>Tags tell the browser what type of content to display. The tags are written in a specific order to define the structure of the page.</p>
+            </section>
+           
+            
+           
+            
+    <section data-background="#ff0000">
+              <h3>Example of three common HTML tags.</h3>
+              <p class="fragment"><code>&lt;h1&gt;</code> specifies heading text, good for page titles</p>
+              <p class="fragment"><code>&lt;p&gt;</code> specifies paragraph text, good for body text</p>
+              <p class="fragment"><code>&lt;img&gt;</code> displays an image specified by a src (source file)</p>
+              <p class="fragment">Note:it is best practice to write HTML tags in lower case when coding your own pages.</p>
+            </section>
+    <section data-background="#ff0000">
+              <h3>There are many tags.</h3>
+              
+		<p class="fragment"><code>&lt;head&gt;</code></p>
+		<p class="fragment"><code>&lt;body&gt;</code></p>
+		<p class="fragment"><code>&lt;div&gt;</code></p>
+		<p class="fragment"><code>&lt;a&gt;</code></p>
+		<p class="fragment"><code>&lt;br&gt;</code></p>
+		<p class="fragment"><code>&lt;section&gt;</code></p>
+		<a class="small fragment" style="color: white" href="https://www.w3schools.com/TAgs/ref_byfunc.asp" target="_blank">See more tags</a>
+
+            </section>
+            
+            <section data-menu-title="Pair Tags" data-background="#3f3f3f">
+              <h3>Remember</h3>
+				<p><strong>*Most Tags</strong> work in pairs.(img tag is self closing)</p>
+<pre>
+<code>
+&lt;element&gt; &lt;/element&gt;
+&lt;img src="linktoimage.jpg" /&gt;
+</code></pre>
+			  </section>
+            
+
+    <section data-background-transition="convex" data-background="">
+              <h3 >What is CSS?</h3>
+            </section>
+    <section data-background-transition="convex" data-background="">
+             <h3 >What is CSS?</h3>
+              <p>With HTML you've given a basic structure to your web page, but there's not much customization to the style or layout. Eventually you want to add colors, format text and images, and reposition elements on your page.</p>
+            </section>
+            
+            <section data-background-transition="convex" data-background="">
+             <h3 >What is CSS?</h3>
+              <p>CSS is a language that works with HTML to apply this style and formatting to your web page. Use CSS to find one or more HTML elements, and then provide additional instructions for what to do with that element (such as change its color or center it on the page).</p>
+            </section>
+            
+                <section  data-background="#3f3f3f">
+                 <h3 >W3C</h3>
+              <p>The World Wide Web Consortium (W3C) defines the web standards, or specifications, for these languages. It is <strong>important</strong> to understand web standards to ensure that the different web browsers display your pages accurately. </p>
+              
+            </section>
+            
+             <section data-menu-title="Editors" data-background="#3f3f3f">
+              <h3 >Editors</h3>
+              <p >Editors like Sublime and Dreamweaver include features that allow you to build web pages based on the latest web standards. However specifications can ambigious and each browser (Chrome, FF, Edge, Opera) interpret them differently</p>
+				 <p class="fragment"><strong>Also</strong></p>
+				<p class="fragment"><strong>Do not assume everyone is up-to-date!</strong></p>
+            </section>
+            
+            <section data-menu-title="IT crowd Video" data-background-transition="convex" data-background-video="assets/week1assets/itcrowdbrowser.mp4"> </section>
+            
+    <section data-background="#ff0000">
+		<h3>Combining HTML & CSS</h3>
+              <p>This example shows how CSS is used to change the appearance of the three HTML elements.</p>
+              <p>h1 The heading text is centre-aligned.</p>
+              <p>p The paragraph text is red, bold, and center-aligned.</p>
+              <p>img The image is resized to 150px by 100px.</p>
+            </section>
+    <section data-background="#3f3f3f" class="flexbox-container">
+    <div class="collumn">
+		<p>HTML</p>
+<pre><code class="liveCoding xml" data-livecoding-id="myElement" contenteditable style="font-size: 40%; line-height: normal">
+&lt;h1&gt;Boom!&lt;/h1&gt;
+
+&lt;p class=&quot;title&quot;&gt;Hello&lt;/p&gt;
+
+&lt;img src=&quot;assets/week1assets/html_tattoo.png&quot;/&gt;
+</code>
+</pre>
+		</div>
+   
+    <div class="collumn">
+    <p>CSS</p>
+<pre><code class="liveCoding css" data-livecoding-id="myElement" contenteditable style="font-size: 40%; line-height: normal">
+h1{
+	text-align:center;
+	font-size:1em;
+}
+	
+.title{
+	color: red;
+}
+  
+img{
+	width:150px;
+	height:auto;
+}
+</code></pre>
+		</div>
+             <div class="collumn">
+             <p>Output</p>
+              <div id="myElement">
+        <h1>Boom!</h1>
+        <p class="title">Hello</p>
+        <img src="assets/week1assets/week1assets/week1assets/html_tattoo.png"/>
+      </div>
+		</div>
+            </section>
+            
+     <section data-background-transition="convex"> 
+		 <h3>Setting up your site Cache</h3> 
+		 <p><strong>Local Folder:</strong> This is your working directory—usually a folder on your hard drive. Editors (Dreamweaver) refer to this folder as your local site root</p> 
+		  <p class="fragment">This repesents the server</p>
+		 <p class="fragment">This is where optimised html, css, js, images, videos etc are kept</p>    
+    	<p class="fragment">This is <strong>NOT</strong> where development files are kept, i.e photoshop files etc</p>    
+     </section>   
+          <section data-menu-title="Folder structure" data-background="assets/week1assets/structure.jpg">
+			  </section>   
+           <section data-menu-title="why define"  data-background="">
+           <h3>Why Define a local folder?</h3> 
+			   <p>A common beginner mistake is to start working on web pages in without defining a site. This results in links to assets, such as images and style sheets, pointing to a location on your local computer (cdrive\desktop\wayne\folder) Everything works fine until you come to upload the site to your remote server. Then you discover all your links are broken and need to be fixed.</p>
+			   <p>We reference all assets via relative links (relative to the current page)</p>
+			  </section> 
+          
+           <section data-menu-title="Folder structure" data-background="assets/week1assets/structure.jpg">
+			   <p style="color: red">linking to an image then becomes "/assets/week1assets/imgname.jpg"</p>
+			   <p style="color: red">or linking to a style sheets becomes "/css/style.css"</p>
+			   <p style="color: red">(Makes it much easier to update)</p>
+			  </section>
+          <section data-background-transition="convex" data-background-video="assets/week1assets/jumpfail.mp4"> 
+			  <h3>Fail to prepare<br>Prepare to fail!</h3>
+          </section> 
+          
+          <section data-menu-title="First page" data-background="">
+			  <h3>Creating our first page</h3>
+			  <p>What should we name our first page?</p>
+			  <p class="fragment">index.html, default.html or home.html</p>
+			  <p class="fragment"> When you go to a URL and specify a specific file (HTTP://site.com/about.html), that is what the server will deliver. If you do not specify a file name, the server looks for a default file and displays that automatically</p>
+			  </section>  
+          
+          
+          
+          <section data-menu-title="First page" data-background="">
+			  <h3>HTML Structure</h3>
+			  <p><strong>Head</strong></p>
+			  <p class="fragment">The &lt;head&gt;&lt;/head&gt; element is a container for all head elements – elements which are not directly rendered in a webpage</p>
+			  <p><strong>body</strong></p>
+			  <p class="fragment">The &lt;body&gt;&lt;/body&gt; element is a container for information you want the user to see.</p>
+		</section> 
+          
+          <section data-menu-title="example" data-background="">
+<pre><code style="font-size: 50%; line-height: normal">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;awesome page&lt;/title&gt;
+&lt;link href=&quot;css/style.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+&lt;!--hidden browser info--&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;!--html structure here--&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+</code></pre>
+		</section> 
+           
+    <section data-background-transition="convex" data-background-video="assets/week1assets/logical.mp4"> </section>
+    
+    <section data-menu-title="First page" data-background="">
+			  <h3>Live coding examples</h3>
+		</section> 
+   
+    <section data-menu-title="First page" data-background="">
+			  <h3>Thursdays Session</h3>
+			  <p class="fragment">Setting up site cache</p>
+			  <p class="fragment">Creating a web page</p>
+			  <p class="fragment">Setting up Azure</p>
+              <p class="fragment">Uploading (FTP / File explorer PC)</p>
+		</section> 
+  </div>
+        </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="lib/js/head.min.js"></script> 
+<script src="js/reveal.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="https://code.highcharts.com/highcharts.js"></script> 
+<script src="https://code.highcharts.com/highcharts-more.js"></script> 
+<script src="https://code.highcharts.com/modules/solid-gauge.js"></script> 
+<script src="js/themes/mypbtheme.js"></script> 
+<script src="js/jquery.animateNumber.min.js"></script> 
+<script src="js/main.js"></script> 
+<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+</body>
+</html>

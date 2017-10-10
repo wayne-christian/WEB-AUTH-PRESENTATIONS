@@ -71,3 +71,13 @@ html.jobs .slide-background, html.salary .slide-background, html.start .slide-ba
 .collumn p{
 	font-size: 30%;
 }
+p.tight{margin: 0; 
+	line-height: normal;}
+.reveal p.bullet{
+	list-style:disc inside none;
+     display:list-item; 
+}
+.reveal section img {
+	box-shadow: none!important;
+	max-width: 50%;
+}
