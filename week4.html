@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+		<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<title>Week 4: Advanced Styling, Pseudo Element and the Box Model</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		</head>
+		<body>
+<div class="reveal">
+          <div class="slides">
+    <section data-background-transition="convex" data-background="#333333">
+              <h2 >Hello</h2>
+              <p style="color:#F8AA00">(Web Authoring CMP1130M)</p>
+            </section>
+    <section data-background-transition="convex" data-background-video="assets/week1assets/rainingcode.mp4" data-background-video-loop="loop">
+              <h3 >Wayne Christian</h3>
+              <p style="color:#F8AA00">Designer, Developer, Director & Senior Lecturer</p>
+            </section>
+    <section data-background-iframe="http://adigitalengagement.co.uk/html5/spincss3.html" data-background-interactive data-background="#eeeeee">
+              <p style="color: #222222; padding-bottom: 60px">Todays Lecture<br>Css styling
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </p>
+            </section>
+            <section data-background-transition="convex">
+    	<h2>Stickies!</h2>
+    </section>
+    <section data-background-transition="convex">
+    	<p><img src="assets/week3assets/post1.JPG"/></p>
+    </section>
+     
+     <section data-background-transition="convex">
+    	<p><img src="assets/week3assets/post4.JPG"/></p>
+    </section>
+     <section data-background-transition="convex">
+    	<p><img src="assets/week3assets/post5.JPG"/></p>
+    </section>
+     <section data-background-transition="convex">
+    	<p><img src="assets/week3assets/post6.JPG"/></p>
+    </section>
+     <section data-background-transition="convex">
+    	<p><img src="assets/week3assets/post7.JPG"/></p>
+    </section>
+     <section data-background-transition="convex" data-background="assets/week3assets/post8.JPG">
+    
+    </section>
+    <section data-background-transition="convex">
+    	<p><img src="assets/week3assets/post3.JPG"/></p>
+    </section>
+    <section data-background-transition="convex">
+    	<p>Sorry you will need to research that yourself!</p>
+    	<p class="small">(There are a few hints in the presenations)</p>
+    </section>
+    
+     <section data-background-transition="convex">
+    	<p><img src="assets/week3assets/post2.JPG"/></p>
+    </section>
+
+    <section data-background-transition="convex">
+              <h3>Recap</h3>
+            </section>
+    <section data-background-transition="convex" data-background="#ff0000">
+              <h3>Recap</h3>
+              <p >Last week we looked at</p>
+              <p class="fragment tight bullet" style="">html 5 &amp; its specific tags</p>
+              <p class="fragment tight bullet" style="">html5 vs html4</p>
+              <p class="fragment tight bullet" style="">html5 Semantic Elements</p>
+              <p class="fragment tight bullet" style="">html5 features</p>
+              <p class="fragment tight bullet" style="">Tag, ID, Class, inline styles</p>
+            </section>
+    <section data-background-transition="convex">
+              <h3>Workshop Observations</h3>
+            </section>
+    <section data-background-transition="convex" data-background="lightblue">
+              <h3>Observations</h3>
+              <p class="fragment tight bullet">Using the right structure</p>
+              <p class="fragment tight bullet">When to use a class or style</p>
+              <p class="fragment tight bullet">Compound styles</p>
+              <p class="fragment tight bullet">Developer tools</p>
+              <p class="fragment tight bullet">Typing ConsisTanTly</p>
+            </section>
+            
+            <section >
+              <h3>Using the right structure<</h3>
+				  <p><img src="assets/week2assets/building-structure.png"</p>
+            </section>
+
+    <section data-background-transition="convex" data-background="#3f3f3f">
+              <h3>CSS Syntax</h3>
+              <br>
+              <br>
+              <h2>
+        <pre><code style="font-size: 50%; line-height: normal">
+element tag, #id, .class
+{
+	Property: property value;
+	font-size: 1em;
+}
+
+</code></pre>
+      </h2>
+            </section>
+
+
+    <section data-menu-title="Relative paths">
+              <h3>Relative paths</h3>
+            </section>
+    <section data-menu-title="Folder structure" data-background="assets/week1assets/structure.jpg"> </section>
+    <section data-background-transition="convex" data-background="#7569a9">
+              <h3>Relative paths</h3>
+              <p>Remember that links, files and images are relative to the document being displayed by the server i.e "&#47;assets&#47;image.jpg" or "&#47;css&#47;styles.css"</p>
+              <p class="fragment tight bullet">No "cdrive&#47;wayne&#47;desktop&#47;site"</p>
+              <p class="fragment tight bullet">No "bloody&#92;backslash&#92;paths&#92;to&#92;files"</p>
+              <p class="fragment tight bullet">We use "&#47;" to go forward or</p>
+              <p class="fragment tight bullet"> "&#46&#46&#47;" to go back one folder</p>
+            </section>
+    <section data-background-transition="convex" data-background="#5f86bae">
+              <h3>Typing ConsisTanTly</h3>
+              <p>Be consistent and remember your naming conventions</p>
+              <p class="fragment tight bullet">NameThings in CamelCase</p>
+              <p class="fragment tight bullet">or Capitalisation</p>
+              <p class="fragment tight bullet">or replace_spaces_with_underscore</p>
+              <p class="fragment tight bullet">watch out for typo's &lt;img <strong>scr</strong>="image.jpg" (src)</p>
+            </section>
+     <section data-background="#fbbb6c">
+              <h3>id, class and inline styles</h3>
+              <p>Here a few examples</p>
+              <p class="fragment tight">The <strong>id</strong> (#) attribute specifies a unique id for an HTML element (the value must be unique within the HTML document). </p>
+              <p class="fragment tight">The <strong>class</strong> (.) attribute specifies one or more classnames for an element.</p>
+              <p class="fragment tight">The <strong>style</strong> attribute specifies an inline style for an element.</p>
+            </section>
+    <section data-background="#3f3f3f">
+              <h3>Inline, ID(#), class(.) or tag(div)</h3>
+              <p style="font-size: 40%;"><pre><code>
+&lt;section id=&quot;uniqueid&quot; class=&quot;reuseableclass&quot; style=&quot;inlinestyles&quot;&gt;&lt;/section&gt;				
+					
+</code></pre></p>
+              <p class="fragment">Styles are applied with different <strong>specificity</strong></p>
+              <p class="fragment">Specificity is the means by which browsers decide which CSS property values are the most relevant to an element and, therefore, will be applied. Specificity is based on the matching rules which are composed of different sorts of CSS selectors</p>
+            </section>
+    <section data-background="#fbbb6c">
+              <h3>Compound selector</h3>
+              <p class="fragment">A compound selector can mix the previous 3 types using more than one class, ID and/or tag</p>
+              <p class="fragment">This type of selector has a higher priority (specificity)</p>
+              <pre><code>
+mytag #myid .myclass{
+background-color:red;
+}
+</code></pre>
+            </section>
+            
+             <section data-background="#3f3f3f">
+              <h3>Styling conventions</h3>
+              <p>Apply multiple classes</p>
+              <pre><code> 
+&lt;p class=&quot;myclass otherclass extraclass&quot;&gt;Hello&lt;/p&gt;
+
+.myclass
+{
+}
+.otherclass
+{
+}
+.extraclass
+{
+}
+</code></pre>
+              
+   
+            </section>
+
+    <section data-background-transition="convex" data-background-video="assets/week2assets/logical.mp4"> </section>
+    <section data-background-transition="convex" data-background="#4abbcc">
+              <h3>Today</h3>
+              <p >We will look at</p>
+              <p class="fragment tight bullet" style="">Measurements pixels vs ems vs rems</p>
+              <p class="fragment tight bullet" style="">CSS2 Styles (position, display)</p>
+              <p class="fragment tight bullet" style="">CSS3 styles (box model, flex, grid)</p>
+              <p class="fragment tight bullet" style="">Pseudo classes</p>
+              <p class="fragment tight bullet" style="">Prefixes</p>
+			  <p class="fragment tight bullet"			>Mobile up vs desktop  down</p>
+              <p class="fragment tight bullet" style="">Fixed vs Fluid vs Adaptive vs Responsive Layout</p>
+              <p class="fragment tight bullet" style="">Repsonsive stye sheet, media queries</p>
+            </section>
+			  <section data-background-transition="convex" data-background="#4abbcc">
+				  <p>The live demos will be using the workshop design...here is one i made earlier!</p>
+			  	
+			  </section>
+            
+            <section data-background-iframe="http://adigitalengagement.co.uk/webauthdemosite/" data-background-interactive> </section>
+    <section data-background-transition="convex" data-background-video="assets/week2assets/celebration.mp4"> </section>
+    <section data-background="#ff0000">
+              <h3>Measurements</h3>
+		<p>Pixels vs ems vs rems</p>
+		<p>What units of measurement should we use in our CSS?</p>
+
+            </section>
+    <section data-background="#eeeeee">
+		<h3 class="fragment tight bullet">Pixels are ignorant, don’t use them.</h3>
+		<h3>Use REMs for sizes and spacing.</h3>
+		<h3>Use EMs for media queries.</h3>
+            </section>
+    <section data-background="#d67382">
+              <h3>Pixels</h3>
+              <p>Pixels (px) are what we’ve all become accustomed to over the years. Everyone knows what a pixel is (although the size of a pixel isn’t always the same).</p>
+		<p class="small">Why?<br> <a href="https://webplatform.github.io/docs/tutorials/understanding-css-units/" target="_blank">read more </a></p>
+              
+            </section>
+    <section data-background="#f08572">
+              <h3>Accessibility over “pretty”</h3>
+              <p class="">If you’re setting all of your font-sizes, element sizes and spacing in pixels, you’re not treating the end user with respect.</p>
+
+<p>In most browsers, a user can set their default browser font-size to be a different size to the default (typically 16px). If the user sets their default to 20px, all font-sizes should scale accordingly. However, if the website explicitly sets font-sizes in pixels, a heading set at 30px will always be 30px.</p>
+           <p>That might sound great from a designer/developer point of view - but you’re not the user, stop making websites for yourself.</p>
+            </section>
+    <section data-background="#f69d6d">
+              <h3>REMs</h3>
+              <p class="">REMs are a way of setting font-sizes based on the font-size of the root HTML element. They also allow you to quickly scale an entire project by changing the root font-size (for example at a certain media query/screen size).</p>
+		<quote>[The REM] unit represents the font-size of the root element (e.g. the font-size of the &lt;html&gt;element). When used on the font-size on this root element, it represents its initial value.</quote>
+
+            </section>
+    <section data-background="#ff0000">
+              <h3>How to calculate PX from REM</h3>
+              <p class="">A basic and most common example is to set html font-size is set to 10px, paragraph is set to 1.6rem.</p>
+		<p><code>
+html
+{
+font-size:10px;
+}
+			</code></p>
+              <p class="fragment">1.6rem * 10px = 16px</p>
+		<p class="fragment small">Setting a root font-size of 10px is the most common scenario when I see people using REMs. It allows for a quick conversion between pixel values to REM values simply by dividing the number by 10.</p>
+
+<p class="fragment">Setting the base font-size in pixels still has the same problem as the pixel example above. Accessibility overridden</p>
+            </section>
+            
+            
+    
+    <!--    live section-->
+    
+
+            
+     <section data-background="#fbbb6c">
+              <h3>Live examples</h3>
+			  </section>       
+   <section data-background="#3f3f3f" class="flexbox-container">
+              <div class="collumn">
+        <p>HTML</p>
+        <pre><code class="liveCoding xml" data-livecoding-id="myElement" contenteditable style="font-size: 40%; line-height: normal">
+&lt;h1&gt;Boom!&lt;/h1&gt;
+
+&lt;p class=&quot;title&quot;&gt;Hello&lt;/p&gt;
+
+&lt;img src=&quot;assets/week1assets/html_tattoo.png&quot;/&gt;
+</code>
+</pre>
+      </div>
+              <div class="collumn">
+        <p>CSS</p>
+        <pre><code class="liveCoding css" data-livecoding-id="myElement" contenteditable style="font-size: 40%; line-height: normal">
+h1{
+	text-align:center;
+	font-size:1em;
+}
+	
+.title{
+	color: red;
+}
+  
+img{
+	width:150px;
+	height:auto;
+}
+</code></pre>
+      </div>
+              <div class="collumn">
+        <p>Output</p>
+        <div id="myElement">
+                  <h1>Boom!</h1>
+                  <p class="title">Hello</p>
+                  <img src="assets/week1assets/week1assets/week1assets/html_tattoo.png"/> </div>
+      </div>
+            </section>
+    <section data-menu-title="css examples">
+              <h2>Can I Use?</h2>
+              <p>for A good resource to check interoperability and compatibility</p>
+              <p class="small"><a href="http://caniuse.com/" target="_blank">http://caniuse.com/</a></p>
+            </section>
+    <section data-background-iframe="http://caniuse.com/
+" data-background-interactive> </section>
+
+    
+    
+    <section data-menu-title="First page" data-background="">
+              <h3>Thursdays Session</h3>
+              <p class="fragment tight bullet" style="">Tag, ID, Class, inline styles</p>
+           <p class="fragment tight bullet" style="">selectors &amp; Pseudo-classes</p>
+		<p class="fragment">More CSS Styling</p>
+              <p class="fragment tight bullet" style="">Assesment briefing doc</p>
+              <p class="fragment tight bullet" style="">The CRG</p>
+            </section>
+            <section data-menu-title="First page" data-background="">
+              <h2>BOOM!</h2>
+			  </section>
+  </div>
+        </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="lib/js/head.min.js"></script> 
+<script src="js/reveal.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="https://code.highcharts.com/highcharts.js"></script> 
+<script src="https://code.highcharts.com/highcharts-more.js"></script> 
+<script src="https://code.highcharts.com/modules/solid-gauge.js"></script> 
+<script src="js/themes/mypbtheme.js"></script> 
+<script src="js/jquery.animateNumber.min.js"></script> 
+<script src="js/main.js"></script> 
+<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+</body>
+</html>
