@@ -64,7 +64,7 @@ html.jobs .slide-background, html.salary .slide-background, html.start .slide-ba
 
 .flexbox-container > div {
 	width: 33%;
-	padding: 20px;
+	padding: 0px;
 	box-sizing: border-box;
 	float: left;
 }
