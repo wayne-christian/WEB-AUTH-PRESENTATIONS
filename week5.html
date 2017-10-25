@@ -1,0 +1,748 @@
+<!doctype html>
+<html>
+		<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Week 5: Javascript!</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		</head>
+		<body>
+<div class="reveal">
+          <div class="slides">
+    <section data-background-transition="convex" data-background="#333333">
+              <h2 >Hello</h2>
+              <p style="color:#F8AA00">(Web Authoring CMP1130M)</p>
+            </section>
+    <section data-background-transition="convex" data-background-video="assets/week1assets/rainingcode.mp4" data-background-video-loop="loop">
+              <h3 >Wayne Christian</h3>
+              <p style="color:#F8AA00">Designer, Developer, Director & Senior Lecturer</p>
+            </section>
+    <section data-background-transition="convex">
+              <h2>Stickies!</h2>
+            </section>
+    <section data-menu-title="stickie 1" data-background-transition="convex">
+              <p><img src="assets/week4assets/week4stickies1.JPG"/></p>
+            </section>
+    <section data-menu-title="stickie 2" data-background-transition="convex">
+              <p><img src="assets/week4assets/week4stickies2.JPG"/></p>
+            </section>
+             <section data-menu-title="stickie 3" data-background-transition="convex">
+              <p><img src="assets/week4assets/week4stickies3.JPG"/></p>
+            </section>
+             <section data-menu-title="stickie 4" data-background-transition="convex">
+              <p><img src="assets/week4assets/week4stickies4.JPG"/></p>
+            </section>
+             <section data-menu-title="stickie 5" data-background-transition="convex">
+              <p><img src="assets/week4assets/week4stickies5.JPG"/></p>
+            </section>
+             <section data-menu-title="stickie 6" data-background-transition="convex">
+              <p><img src="assets/week4assets/week4stickies6.JPG"/></p>
+            </section>
+             <section data-menu-title="stickie 7" data-background-transition="convex">
+              <p><img src="assets/week4assets/week4stickies7.JPG"/></p>
+            </section>
+             <section data-menu-title="stickie 8" data-background-transition="convex">
+              <p><img src="assets/week4assets/week4stickies8.JPG"/></p>
+            </section>
+             
+             <section data-menu-title="stickie 9" data-background-transition="convex">
+              <p><img src="assets/week4assets/week4stickies10.JPG"/></p>
+            </section>
+    <section data-menu-title="stickie 2" data-background-transition="convex" data-background="assets/week4assets/home.jpg">
+              <h4>First Web Auth Social
+        (Some awards, showcases etc)</h4>
+              <h3>Home Night Club
+        Thursday 14th December(Week 12)</h3>
+              <h2>6.30 - 9.00</h2>
+              <h3>Student Deals!</h3>
+            </section>
+    <section style="text-align: center" data-background-video="assets/week4assets/moonwalk.mp4" data-background-video-loop="loop">
+              <h2>http://poll.fm/5vajx</h2>
+              <p> 
+        <script type="text/javascript" charset="utf-8" src="http://static.polldaddy.com/p/9858093.js"></script>
+        <noscript>
+                <a href="http://polldaddy.com/poll/9858093/">Home Night club social, Thursday 14th December (Week 12),  6.30 - 9.00</a>
+                </noscript>
+      </p>
+            </section>
+    <section data-background-transition="convex">
+              <h3>Recap</h3>
+            </section>
+    <section data-background-transition="convex" data-background="#ff0000">
+              <h3>Recap</h3>
+              <p >Last week we looked at</p>
+              <p class="fragment tight bullet" style="">Measurements pixels vs ems vs rems</p>
+              <p class="fragment tight bullet" style="">CSS2 Styles (position, display)</p>
+              <p class="fragment tight bullet" style="">CSS3 styles (box model, flex)</p>
+              <p class="fragment tight bullet" style="">Pseudo classes</p>
+              <p class="fragment tight bullet" style="">Prefixes</p>
+              <p class="fragment tight bullet"			>Mobile up vs desktop  down</p>
+              <p class="fragment tight bullet" style="">Fixed vs Fluid vs Adaptive vs Responsive Layout</p>
+              <p class="fragment tight bullet" style="">Repsonsive stye sheet, media queries</p>
+            </section>
+    <section data-background-transition="convex">
+              <h3>Workshop Observations</h3>
+            </section>
+    <section data-background-transition="convex" data-background="lightblue">
+              <h3>Observations</h3>
+              <p class="fragment tight bullet">Being too specific with media query</p>
+              <p class="fragment tight bullet">Not using developer tools to check</p>
+              <p class="fragment tight bullet">Centreing content</p>
+              <p class="fragment tight bullet">Parent &gt; child relationships (css)</p>
+              <p class="fragment tight bullet">Keep retyping the same css styles (reset.css)</p>
+            </section>
+    <section data-background="#ffffff">
+              <h3 style="color: #444">Being too specific with media query</h3>
+              <pre><code style="font-size: 50%; line-height: normal"> 
+body{
+}
+ @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+ body{
+      }
+  }
+@media only screen and (min-device-width: 481px) and (max-device-width: 680px) {
+ body{
+      }
+ }
+             </code></pre>
+              <p style="color: #444">let the styles cascade up with break points for mobile, tablet and desktop. You will not get the "nomans land" where no conditions are met and no stylesare applied</p>
+            </section>
+    <section data-background="assets/week4assets/chrome.png">
+              <h3>Not using developer tools to check</h3>
+              <p class="fragment">Using developer tools will show you what styles are being inherited from your styles and the browser</p>
+            </section>
+    <section data-background="#f08572">
+              <h3>Centreing content</h3>
+              <p class="fragment">There are a few ways to centre content, each will vary depending on what you need, i.e a ul navigation or an image dead centre of the screen. Here are 2 examples</p>
+            </section>
+    <section data-menu-title="centre example 1" data-background="#3f3f3f" class="flexbox-container">
+              <p>Horizontally centreing inline elements (nav)</p>
+              <div class="collumn">
+        <p>HTML</p>
+        <pre><code class="liveCoding xml"  data-livecoding-id="myElementa" contenteditable style="font-size: 40%; line-height: normal">
+&lt;nav class=&quot;nav&quot; role=&quot;navigation&quot;&gt;
+  &lt;ul class=&quot;nav-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About me&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Clients&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code>
+</pre>
+      </div>
+              <div class="collumn">
+        <p>CSS</p>
+        <pre><code class="liveCoding css" data-livecoding-id="myElementa" contenteditable style="font-size: 30%; line-height: normal">
+.nav {
+      min-width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  background: #fefefe;
+  border: 1px solid #e2e2e2;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.nav-list > li {
+  float: left;
+}
+.nav-list > li:last-child a {
+  margin-right: 0;
+}
+.nav-list a {
+  display: block;
+  padding: 10px 12px;
+  margin: 0 1px 0 0;
+  color: #fff;
+  background: #18b160;
+  font-size:.3em
+}
+.nav-list:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+</code></pre>
+      </div>
+              <div class="collumn">
+        <p>Output</p>
+        <div id="myElementa"> </div>
+        <p> Note what makes this work is:<br>
+                  width: -webkit-fit-content;<br>
+                  width: -moz-fit-content;<br>
+                  width: fit-content;<br>
+                </p>
+      </div>
+            </section>
+    <section data-menu-title="centre example 2" data-background="#3f3f3f" class="flexbox-container">
+              <p>Horizontally centreing inline elements (nav) 2</p>
+              <div class="collumn">
+        <p>HTML</p>
+        <pre><code class="liveCoding xml"  data-livecoding-id="myElementb" contenteditable style="font-size: 40%; line-height: normal">
+&lt;nav class=&quot;nav&quot; role=&quot;navigation&quot;&gt;
+  &lt;ul class=&quot;nav-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About me&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Clients&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code>
+</pre>
+      </div>
+              <div class="collumn">
+        <p>CSS</p>
+        <pre><code class="liveCoding css" data-livecoding-id="myElementb" contenteditable style="font-size: 30%; line-height: normal">
+.nav {
+      min-width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  background: #fefefe;
+  border: 1px solid #e2e2e2;
+  display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0 auto;
+
+}
+.nav-list > li {
+  display: inline-block;
+}
+
+.nav-list a {
+  display: block;
+  padding: 10px 12px;
+  margin: 0 1px 0 0;
+  color: #fff;
+  background: #18b160;
+  font-size:.3em;
+  box-sizing:border-box;
+}
+
+</code></pre>
+      </div>
+              <div class="collumn">
+        <p>Output</p>
+        <div id="myElementb"> </div>
+        <p> Note what makes this work is:<br>
+                  display: table; in parent nav<br>
+                </p>
+      </div>
+            </section>
+    <section data-background="#f08572">
+              <h3>Parent &gt; child relationships (css)</h3>
+              <p class="fragment">Some times the parent element will need css applying for example text-align center or absolutely positioning with in a relative element.</p>
+            </section>
+    <section data-background="#3f3f3f">
+              <h3>Keep retyping the same css styles (reset.css)</h3>
+              <p>Styles inherit but sometimes we need to reset all our styles to be consistent</p>
+              <p>add this to th eneginning of your stylesheet or in a seperate css file - just makes sure it is loaded beofre your main style</p>
+              <pr><code> html, body, div, span, applet, object, iframe,
+                h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+                a, abbr, acronym, address, big, cite, code,
+                del, dfn, em, img, ins, kbd, q, s, samp,
+                small, strike, strong, sub, sup, tt, var,
+                b, u, i, center,
+                dl, dt, dd, ol, ul, li,
+                fieldset, form, label, legend,
+                table, caption, tbody, tfoot, thead, tr, th, td,
+                article, aside, canvas, details, embed, 
+                figure, figcaption, footer, header, hgroup, 
+                menu, nav, output, ruby, section, summary,
+                time, mark, audio, video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+                }
+                /* HTML5 display-role reset for older browsers */
+                article, aside, details, figcaption, figure, 
+                footer, header, hgroup, menu, nav, section {
+                display: block;
+                }
+                body {
+                line-height: 1;
+                }
+                ol, ul {
+                list-style: none;
+                }
+                blockquote, q {
+                quotes: none;
+                }
+                blockquote:before, blockquote:after,
+                q:before, q:after {
+                content: '';
+                content: none;
+                }
+                table {
+                border-collapse: collapse;
+                border-spacing: 0;
+                } </code></pr>
+            </section>
+    <section data-menu-title="css3 transform">
+              <h3>Transform</h3>
+              <p>The transform property applies a 2D or 3D transformation to an element. This property allows you to rotate, scale, move, skew, etc., elements.</p>
+            </section>
+    <section data-menu-title="Block live example" data-background="#3f3f3f" class="flexbox-container">
+              <p class="small">Try display:inline or inline-block and float:left</p>
+              <div class="collumn">
+        <p>HTML</p>
+        <pre><code class="liveCoding xml" data-livecoding-id="myElement" contenteditable style="font-size: 40%; line-height: normal">
+&lt;div class=&quot;wrapper transformexample&quot;&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+      </div>
+              <div class="collumn">
+        <p>CSS</p>
+        <pre><code class="liveCoding css" data-livecoding-id="myElement" contenteditable style="font-size: 40%; line-height: normal">
+.transformexample{
+background-color:white;
+padding:10px;
+height:200px;
+position:relative;
+}
+.transformexample .box {
+background-color: royalblue;
+height: 80px;
+width: 80px;
+margin: 5px;
+}
+</code></pre>
+      </div>
+              <div class="collumn">
+        <p>Output</p>
+        <div id="myElement"> </div>
+        <p class="small"> try: position:absolute; <br>
+                  left:50%;<br>
+                  top:50%;<br>
+                  transform:translate(-50%,-50%);
+                  transform:scale(.5); </p>
+      </div>
+            </section>
+    <section >
+              <h3>CSS Grid</h3>
+              <p>CSS Grid is a two-dimensional layout system created specifically to tackle grid-based user interfaces on the web.</p>
+            </section>
+    <section data-menu-title="grid explaination">
+              <p>CSS Grid introduces a series of properties that allow us to create grid structures and control the placement and sizing of grid items using CSS. This means that we are able to use media queries to adapt our grids to different contexts.</p>
+            </section>
+    <section data-menu-title="Block live example" data-background="#3f3f3f" class="flexbox-container">
+              <div class="collumn" style="width: 50%">
+        <p>HTML</p>
+        <pre><code class=""  contenteditable style="font-size: 40%; line-height: normal">
+&lt;div class=&quot;wrapper&quot;&gt;
+  &lt;div class=&quot;box header&quot;&gt;Header&lt;/div&gt;
+  &lt;div class=&quot;box sidebar&quot;&gt;Sidebar&lt;/div&gt;
+  &lt;div class=&quot;box sidebar2&quot;&gt;Sidebar 2&lt;/div&gt;
+  &lt;div class=&quot;box content&quot;&gt;Content
+    &lt;br /&gt; More content than we had before so this column is now quite tall.&lt;/div&gt;
+  &lt;div class=&quot;box footer&quot;&gt;Footer&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+      </div>
+              <div class="collumn" style="width: 50%">
+        <p>CSS</p>
+        <pre><code class="" contenteditable style="font-size: 30%; line-height: normal">
+.sidebar {
+        grid-area: sidebar;
+    }
+
+    .sidebar2 {
+        grid-area: sidebar2;
+    }
+
+    .content {
+        grid-area: content;
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+
+    .wrapper {
+        background-color: #fff;
+        color: #444;
+    }
+
+  .wrapper {
+   
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas:
+     "header"
+     "sidebar"
+     "content"
+     "sidebar2"
+     "footer"
+  }
+
+    @media only screen and (min-width: 500px)  {
+    .wrapper {
+
+        grid-template-columns: 20% auto;
+        grid-template-areas:
+    "header   header"
+        "sidebar  content"
+        "sidebar2 sidebar2"
+        "footer   footer";
+    }
+    }
+
+    @media only screen and (min-width: 600px)   {
+        .wrapper {
+      grid-gap: 20px;
+            grid-template-columns: 120px auto 120px;
+            grid-template-areas:
+      "header  header  header"
+            "sidebar content sidebar2"
+            "footer  footer  footer";
+            max-width: 600px;
+        }
+    }
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 50%; 
+}
+
+.header,
+.footer {
+  background-color: #999;
+}
+
+.sidebar2 {
+  background-color: #ccc;
+  color: #444;
+}
+</code></pre>
+      </div>
+            </section>
+    <section>
+              <h4>Grid query example</h4>
+              <div class="exwrapper">
+        <div class="box header">Header</div>
+        <div class="box sidebar">Sidebar</div>
+        <div class="box sidebar2">Sidebar 2</div>
+        <div class="box content">Content <br />
+                  More content than we had before so this column is now quite tall.</div>
+        <div class="box footer">Footer</div>
+      </div>
+            </section>
+    <section data-menu-title="website demo" data-background="#fff" data-background-iframe=" https://gridbyexample.com/examples/" data-background-interactive> </section>
+    <section data-menu-title="Todays lecture" data-background-video="https://assets.awwwards.com/awards/external/2017/10/59d785743344c.mp4" data-background-video-loop="loop">
+              <p style="color: 222">You should, by now</p>
+              <h3 style="color: 222">Researched into good sites</h3>
+              <p>Preferable around music/ bands and customisation: here a few I dug out</p>
+            </section>
+    <section data-menu-title="example 1" data-background-iframe="http://customiser.pennyskateboards.com/uk/" data-background-interactive> </section>
+    <section data-menu-title="example 2" data-background-iframe="http://special.bose.eu/en/quietcomfort/ov1" data-background-interactive> </section>
+    <section data-menu-title="example 3" data-background-iframe="http://blacknegative.com/" data-background-interactive> </section>
+    <section data-menu-title="example 4" data-background-iframe="http://www.thisshell.com/" data-background-interactive> </section>
+    <section data-menu-title="example 5" data-background-iframe="https://www.justareflektor.com/" data-background-interactive> </section>
+    <section data-menu-title="example 6" data-background-iframe="https://kamra.invisi-dir.com/" data-background-interactive> </section>
+    <section data-menu-title="example 7" data-background-iframe="https://odra.city/udroecu" data-background-interactive> </section>
+    <section data-menu-title="example 8" data-background-iframe="https://emmitfenn.com/" data-background-interactive> </section>
+    <section data-menu-title="example 9" data-background-iframe="http://www.evanshalshaw.com/more/bondcars/" data-background-interactive> </section>
+    <!--<section data-menu-title="Todays lecture" data-background-video="https://assets.awwwards.com/awards/external/2017/10/59d785743344c.mp4" data-background-video-loop="loop">
+			 <p style="">Todays Lecture<br/>Intorduction to</p>
+	   <h3>Javascript</h3><br>  
+			  </section>-->
+    
+    <section data-menu-title="Todays lecture" data-background-video="https://assets.awwwards.com/awards/external/2017/04/awwwards-Cedric Pereira-porfolio-transition-horizontal.mp4" data-background-video-loop="loop">
+              <p style="color: 222">Todays Lecture<br/>
+        Introduction to</p>
+              <h3 style="color: 222">Javascript<br>
+      </h3>
+            </section>
+               <section data-menu-title="stickie 2" data-background-transition="convex">
+              <p><img src="assets/week4assets/image24.jpg"/></p>
+            </section>
+    
+    <!--    CURRENT-->
+    <section data-background-transition="convex" data-background="#4abbcc">
+              <h3>New focus</h3>
+              <p >The next 4 weeks we will look at</p>
+              <p class="fragment tight bullet" style="">Week5: Introduction to JS</p>
+              <p class="fragment tight bullet" style="">Week6: The Dom</p>
+              <p class="fragment tight bullet" style="">Week7: $('JQUERY');</p>
+              <p class="fragment tight bullet" style="">Week8: Peer Review </p>
+            </section>
+    <section data-background-transition="convex" data-background="assets/week4assets/peerreview.jpg">
+              <h3>MILESTONE - WEEK 8</h3>
+              <p class="fragment tight bullet" style="">Everyone will undertake a critique of two other individuals pieces of work. This should be done in collaboration with the individual, giving them feedback regarding the critique.</p>
+              <p class="fragment tight bullet" style="">Everyone will then conduct a selfreflection where you will include the feedback you have been provided.</p>
+              <p class="fragment tight bullet" style="">The milestone is compulsory and is worth 10%, handed in with your final assesment</p>
+            </section>
+    <section data-background-transition="convex" data-background="#4abbcc">
+              <h3>Today</h3>
+              <p >We will look at</p>
+              <p class="fragment tight bullet" style="">JS Introduction</p>
+              <p class="fragment tight bullet" style="">Why we teach you Javascript</p>
+              <p class="fragment tight bullet" style="">Java and Javascript</p>
+              <p class="fragment tight bullet" style="">History</p>
+              <p class="fragment tight bullet" style="">JS Libraries</p>
+              <p class="fragment tight bullet" style="">Using and loading JS</p>
+              <p class="fragment tight bullet" style="">Rules & variables</p>
+            </section>
+    <section data-menu-title="Todays lecture" data-background-video="assets/week4assets/headexplosion.mp4" >
+              <h3>Introduction</h3>
+              <p>...just when you feel you have got on top of web authoring we move onto JS</p>
+            </section>
+           
+<section data-background="#3f3f3f" class="flexbox-container">
+ <h3>JS looks like</h3>
+ 
+        <pre><code style="font-size: 90%; line-height: normal">
+//fire  function
+myfunction();
+
+function myfunction(){
+//do stuff
+
+} </code></pre>
+
+			  </section >
+     
+    <section data-background-transition="convex" data-background="#4abbcc">
+              <h3>Introduction</h3>
+              <p class="fragment tight bullet" style="">According to the StackOverflow developer survey JavaScript is the most popular programming language in the world.</p>
+              <p class="fragment tight bullet" style="">It is used on servers, tablets, mobile phones, desktop applications and (of course) the internet.</p>
+              <p class="fragment tight bullet" style="">It is intended to add interactive content to HTML and enhance GUI components.</p>
+              <p class="fragment tight bullet" style="">It is an interpreted language (scripts execute without preliminary compilation)</p>
+            </section>
+    <section data-background-transition="convex" data-background="#4abbcc">
+             
+              <p class=" tight bullet" style="">JavaScript is a client-side scripting language.<br>
+        Client-side scripting language is a programming language which executes on the clients machine (browser) rather than the server.</p>
+              <p class="fragment tight bullet" style="">JavaScript does not need a licence, everyone can use it freely!</p>
+              <p class="fragment tight bullet" style="">This has contributed to its popularity in becoming a standard web language.</p>
+            </section>
+    <section data-background-transition="convex" data-background="#4abbcc">
+              <h3>Why we teach you Javascript</h3>
+              <p class="fragment tight bullet" style="">…is easy to learn</p>
+              <p class="fragment tight bullet" style=""> …is easy to edit</p>
+              <p class="fragment tight bullet" style=""> …is a prototyping language, good for testing algorithms.</p>
+              <p class="fragment tight bullet" style=""> …has a lot of openly accessible tools, frameworks and libraries.</p>
+              <p class="fragment tight bullet" style=""> …is easy(ish) to debug - using the console!</p>
+              <p class="fragment tight bullet" style=""> …allows for Object Oriented programming.</p>
+              <p class="fragment tight bullet" style=""> …is part of most web pages.</p>
+            </section>
+    <section data-background-transition="convex" data-background="#ff0000">
+              <h2>ARE JAVASCRIPT AND JAVA THE SAME?</h2>
+            </section>
+    <section data-menu-title="Todays lecture" data-background="ffffff" >
+              <h3 style="color: red">NO</h3>
+              <img style="width: 50%" src="assets/week4assets/hamster.jpeg"/> </section>
+    <section data-menu-title="java vs js" data-background="" >
+              <p><strong> Java and JavaScript are two VERY different languages.… in concept, design and usage.</strong></p>
+              <p class="fragment tight bullet" style=""> Java programs can run alone, as applets or stand-alone apps.</p>
+              <p class="fragment tight bullet" style=""> JavaScript must run in a browser.</p>
+              <p class="fragment tight bullet" style=""> Java programs get complied. JavaScript gets interpreted on the fly.!</p>
+              <p class="fragment tight bullet" style=""> Java is a full programming language, JavaScript is a scripting language.</p>
+            </section>
+    <section data-menu-title="java vs js 2" data-background="" >
+              <h4>JavaScript was named Mocha then “liveScript”. The developers of the language renamed it JavaScript in an attempt to appeal to Java programmers… a very large market!</h4>
+            </section>
+    <section data-menu-title="js libraries" data-background="#fff" >
+              <h3 style="color: #222">JS Libraries shape the web</h3>
+              <p class="bullet" style="color: #222"> Much of the interactive content is now powered by various JS libries.</p>
+		<p class="fragment tight bullet" style="color: #222"> JQuery is currently by far the most popular. However, other libraries are becoming increasingly important.</p>
+              <img class="fragment " src="assets/week4assets/framework-graph.jpg"/> </section>
+    <section data-menu-title="java vs js" data-background="#3f3f3f" >
+              <h3>Using and loading JS</h3>
+              <p class="" style=""> You can have inline scripts like inline css</p>
+              <pre><code style="font-size: 80%">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;js&lt;/title&gt;
+&lt;script&gt;console.log('hello world');&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;h2&gt;Internal JavaScript&lt;/h2&gt;
+&lt;/body&gt;
+&lt;/html&gt;	
+		  </code></pre>
+            </section>
+            
+    <section data-menu-title="loading js" data-background="#3f3f3f" >
+              <h3>Using and loading JS</h3>
+              <p class="" style="">Better to load js files externally</p>
+              <p class="fragment tight bullet" style="">Placing scripts in external files has some advantages:</p>
+              <p class="fragment tight bullet" style="">It separates HTML and code.</p>
+              <p class="fragment tight bullet" style="">It makes HTML and JavaScript easier to read and maintain.</p>
+              <p class="fragment tight bullet" style="">Cached JavaScript files can speed up page loads.</p>
+            </section>
+            
+             <section data-menu-title="loading js example" data-background="#3f3f3f" >
+              <h3>Using and loading JS</h3>
+              <pre><code style="font-size: 80%; line-height: normal">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;js&lt;/title&gt;
+&lt;script src=&quot;js/myScript.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;h2&gt;Internal JavaScript&lt;/h2&gt;
+&lt;/body&gt;
+&lt;/html&gt;	
+		  </code></pre>
+            </section>
+    <section data-background="#ffffff" class="flexbox-container">
+              <h3 style="color: #333">Using the right structure</h3>
+              <p><img src="assets/week1assets/structure.jpg"/></p>
+            </section>
+    <section data-background="#3f3f3f">
+              <h3>Loading</h3>
+              <p>Why is it important to wait for the window to be fully loaded before executing any scripts?</p>
+              
+              <pre><code class="fragment" style="font-size: 60%; line-height: normal">
+window.onload = function() {
+init();
+}
+function init(){
+ console.log('init fired');
+}
+           </code></pre>
+            </section>
+    <section data-background="#3f3f3f" class="flexbox-container">
+		<h3>Dom Example <span class="small">(Document Object Model)</span></h3>
+              <p class="small">We will dicuss next week</p>
+              <div class="collumn" style="width: 50%">
+<pre><code style="font-size: 60%; line-height: normal">
+&lt;div id=&quot;slider&quot;&gt;
+ &lt;div id=&quot;texholder&quot;&gt;
+  &lt;p id=&quot;demo&quot;&gt;title&lt;/p&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+</code></pre>
+      </div>
+              <div class="collumn" style="width: 50%">
+        <pre><code style="font-size: 60%; line-height: normal">
+window.onload = function() {
+ init();
+}
+function init(){
+ console.log('init fired');
+ var x = document.getElementById("demo");
+ x.style.color = "red";
+} </code></pre>
+      </div>
+            </section>
+           
+            
+  <section data-background="#3f3f3f" class="flexbox-container">
+              <h3>Syntax Breakdown</h3>
+ 
+        <pre><code style="font-size: 90%; line-height: normal">
+//fire init function
+init();
+
+function init(){
+//find the element with an id of demo and store as a var
+ var x = document.getElementById("demo");
+
+//change the css proeprty color to red
+//dot notation 
+ x.style.color = "red";
+} </code></pre>
+
+            </section>
+    
+    <section data-menu-title="js rules" data-background="">
+              <h3>Rules</h3>
+              <p class="fragment tight bullet" style="">JavaScript is CASE SENSITIVE</p>
+              <p class="fragment tight bullet" style="">Brackets must always match, each opening bracket must have a corresponding closing bracket. init(){}</p>
+              <p class="fragment">Quotes must always match, and must always be closed.<br>
+- “hello World” <br>
+- ‘hello World’</p>
+            </section>
+            <section data-menu-title="variable rules" data-background="">
+              <h3>Variable Rules</h3>
+              <p class="fragment tight bullet">A variable is like a storage container inside the code.</p>
+              <p class="fragment tight bullet">Each variable has a name so the program can refer to it.</p>
+              <p class="fragment tight bullett">Variables can contain numbers, letters, special characters.</p>
+               <p class="fragment tight bullet">Contents can be changed freely.</p>
+                <p class="fragment tight bullet">Must start with a letter or an underscore, NOT A NUMBER</p>
+                <p class="fragment tight bullet">Can NOT have spaces in them.</p>
+            </section>
+            <section data-menu-title="next session" data-background="">
+              <h3>Variables</h3>
+              <pre><code style="font-size: 90%; line-height: normal">
+              var num = 31;
+              var boolean = true;
+              var string = 'wayne'
+              var array[item1, item2, item3];
+              var object= {firstname: wayne, lastname:christian}
+              </code></pre>
+            </section>
+            
+    
+    <section data-menu-title="next session" data-background="">
+              <h3>Thursdays Session</h3>
+              <p class="fragment tight bullet" style="">Basic Javascript</p>
+              <p class="fragment tight bullet" style="">Logging</p>
+              <p class="fragment">Using JS to change CSS</p>
+            </section>
+    <section data-menu-title="finish" data-background="">
+              <h2>BOOM!</h2>
+            </section>
+  </div>
+        </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="lib/js/head.min.js"></script> 
+<script src="js/reveal.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="https://code.highcharts.com/highcharts.js"></script> 
+<script src="https://code.highcharts.com/highcharts-more.js"></script> 
+<script src="https://code.highcharts.com/modules/solid-gauge.js"></script> 
+<script src="js/themes/mypbtheme.js"></script> 
+<script src="js/jquery.animateNumber.min.js"></script> 
+<script src="js/main.js"></script> 
+<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+</body>
+</html>
