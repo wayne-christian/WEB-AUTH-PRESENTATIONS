@@ -1,0 +1,633 @@
+<!doctype html>
+<html>
+		<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Week 5: Java script!</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		</head>
+		<body>
+<div class="reveal">
+          <div class="slides">
+    <section data-background-transition="convex" data-background="#333333">
+              <h2 >Hello</h2>
+              <p style="color:#F8AA00">(Web Authoring CMP1130M)</p>
+            </section>
+    <section data-background-transition="convex" data-background-video="assets/week1assets/rainingcode.mp4" data-background-video-loop="loop">
+              <h3 >Wayne Christian</h3>
+              <p style="color:#F8AA00">Designer, Developer, Director & Senior Lecturer</p>
+            </section>
+    <section data-background-transition="convex">
+              <h2>Stickies!</h2>
+            </section>
+    <section data-menu-title="stickie 1" data-background-transition="convex">
+              <p><img src="assets/week5assets/img1.JPG"/></p>
+            </section>
+    <section data-menu-title="stickie 2" data-background-transition="convex">
+              <p><img src="assets/week5assets/img2.JPG"/></p>
+            </section>
+            <section data-menu-title="stickie 3" data-background-transition="convex">
+              <p><img src="assets/week5assets/img3.JPG"/></p>
+            </section>
+            <section data-menu-title="stickie 4" data-background-transition="convex">
+              <p><img src="assets/week5assets/img4.JPG"/></p>
+            </section>
+            
+            <section data-menu-title="stickie 5" data-background-transition="convex">
+              <p><img src="assets/week5assets/img5.JPG"/></p>
+            </section>
+            
+            <section data-menu-title="stickie 6" data-background-transition="convex">
+              <p><img src="assets/week5assets/img6.JPG"/></p>
+            </section>
+            
+            <section data-menu-title="stickie 7" data-background-transition="convex">
+              <p><img src="assets/week5assets/img7.JPG"/></p>
+            </section>
+            <section data-menu-title="stickie 8" data-background-transition="convex">
+              <p><img src="assets/week5assets/img10.jpg"/></p>
+            </section>
+            <section data-menu-title="stickie 9" data-background-transition="convex">
+              <p><img src="assets/week5assets/img8.JPG"/></p>
+            </section>
+            
+            <section data-menu-title="stickie 10" data-background-transition="convex">
+              <p><img src="assets/week5assets/img9.JPG"/></p>
+            </section>
+            
+            
+            
+    <section data-menu-title="social" data-background-transition="convex" data-background="assets/week4assets/home.jpg">
+              <h4>First Web Auth Social
+        (Some awards, showcases etc)</h4>
+              <h3>Home Night Club
+        Thursday 14th December(Week 12)</h3>
+              <h2>6.30 - 9.00</h2>
+              <h3>Student Deals!</h3>
+            </section>
+    <section data-background-transition="convex" data-background="assets/week5assets/cow-dancing.gif" data-background-size="300px" >
+              <h3>Recap</h3>
+            </section>
+    <section data-background-transition="convex" data-background="#ff0000">
+              <h3>Recap</h3>
+              <p >Last week we looked at</p>
+              <p class="fragment tight bullet" style="">Variables</p>
+               <p class="fragment tight bullet" style="">Loading script</p>
+              <p class="fragment tight bullet" style="">Outputting in the console</p>
+              <p class="fragment tight bullet" style="">Alert(), prompt(), console.log()</p>
+              <p class="fragment tight bullet" style="">Writing a function</p>             
+              <p class="fragment tight bullet" style="">Targeting an element by ID</p>
+              <p class="fragment tight bullet" style="">Getting an elements value</p>
+            </section>
+    <section data-background-transition="convex">
+              <h3>Workshop Observations</h3>
+              <p class="fragment tight bullet">Variable Rules</p>
+              <p class="fragment tight bullet">Not using developer tools to check errors (actually reading them)</p>
+              <p class="fragment tight bullet">Encapsulation and Ordering</p>
+              <p class="fragment tight bullet">Variable scope</p>
+              <p class="fragment tight bullet">Getting and Setting</p>
+            </section>
+    <section data-menu-title="variable rules" data-background="">
+              <h3>Variable Rules</h3>
+              <p class="fragment tight bullet">A variable is like a storage container inside the code.</p>
+              <p class="fragment tight bullet">Each variable has a name so the program can refer to it.</p>
+              <p class="fragment tight bullett">Variables can contain numbers, letters, special characters.</p>
+              <p class="fragment tight bullet">Contents can be changed freely.</p>
+              <p class="fragment tight bullet">Must start with a letter or an underscore, NOT A NUMBER</p>
+              <p class="fragment tight bullet">Can NOT have spaces in them.</p>
+            </section>
+    <section data-menu-title="next session" data-background="">
+              <h3>Variables</h3>
+              <pre><code style="font-size: 80%; line-height: normal">
+var num = 31;
+var boolean = true;
+var string = 'wayne'
+var array[item1, item2, item3];
+var object= {firstname: wayne, lastname:christian}
+              </code></pre>
+            </section>
+            
+             <section data-menu-title="console" data-background-transition="convex" data-background="assets/week5assets/error.png">
+              <h4>The console is your friend</h4>
+    
+            </section>
+            
+            
+            <section data-background="#3f3f3f" class="flexbox-container">
+              <h3>Encapsulation and Ordering</h3>
+ 
+        <pre><code style="font-size: 80%; line-height: normal">
+window.onload = function() {
+ init();
+}
+function init(){
+ console.log('init fired');
+} 
+// out side will execute first and break
+var x = document.getElementById("demo");
+ x.style.color = "red";
+</code></pre>
+
+            </section>
+            
+            <section data-background="#3f3f3f" class="flexbox-container">
+              <h3>Variable Scope</h3>
+ 
+				<p>JavaScript has two scopes – <strong>global</strong> and <strong>local</strong>. Any variable declared outside of a function belongs to the global scope, and is therefore accessible from anywhere in your code. Each function has its own scope, and any variable declared within that function is only accessible from that function and any nested functions</p>
+
+			  </section>
+            
+            
+            <section data-background="#3f3f3f" class="flexbox-container">
+              <h3>Variable Scope</h3>
+ 
+        <pre><code style="font-size: 60%; line-height: normal">
+var name ="wayne";
+window.onload = function() {
+ init();
+ getname();
+}
+function init(){
+var surname ="christian"
+ console.log(name);
+} 
+
+function getname(){
+ console.log(name, surname);
+} 
+// will get an undefined as var surname is not accessible
+
+</code></pre>
+
+            </section>
+            
+            
+            <section data-background="#3f3f3f" class="flexbox-container">
+              <h3>Variable Lifetime</h3>
+ 
+				<p>The lifetime of a JavaScript variable starts when it is declared.</p>
+
+				<p>Local variables are deleted when the function is completed.</p>
+
+<p>In a web browser, global variables are deleted when you close the browser window (or tab), but remains available to new pages loaded into the same window.</p>
+				<p class="small">implications?</p>
+
+            </section>
+            
+            
+            <section data-background="#3f3f3f">
+              <h4>Targeting elements in the DOM</h4>
+				<p>Syntax issues (but logical reasoning)</p>
+				<pre><code class="smallcode fragment">
+document.myid = "text";
+
+var mynode = document.getElementById("id");
+mynode="hello";
+// this just targets the whole element and not an attribute.
+			   	
+			   	
+			   </code></pre>
+			  </section>
+      
+            <section data-menu-title="finish" data-background-video="assets/week5assets/stayontarget.mp4">
+              <h3>Targeting elements</h3>
+            </section>
+    <section data-background="#3f3f3f">
+              <h4>Targeting elements in the DOM</h4>
+              <p class="tight small" style="">So far we have only "get" or "set" DOM elements by ID</p>
+              <pre><code class="smallcode fragment">
+var mynode = document.getElementById("id") // get
+mynode.style.color="red" //set
+			   	
+var mynode = document.getElementById("id").value //get input value
+mynode.value = "hello" //set input value
+			   	
+			   	
+			   </code></pre>
+              <p class="small fragment">anything wrong here?</p>
+            </section>
+    <section data-background="assets/week5assets/morpheus.jpeg" data-background-size="400px" data-background-color="#323232"> </section>
+            
+   
+    <section data-menu-title="Todays lecture" data-background-video="https://assets.awwwards.com/awards/external/2017/06/59563a21a83ff.mp4" data-background-video-loop="loop">
+		<h3>Reflect for a mo</h3>
+     
+       </section>
+    <section data-menu-title="Todays lecture" data-background-video="assets/week5assets/dom.mp4" data-background-video-loop="loop">
+              <p style="color: 222">Todays Lecture<br/>
+        Introduction to</p>
+              <h3><br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </h3>
+            </section>
+    <section data-menu-title="Todays Session" data-background="">
+              <h3>Today</h3>
+              <p>We will look at:</p>
+              <p class="fragment tight bullet" style="">Introduction to the Document Object Model (DOM)</p>
+              <p class="fragment tight bullet" style="">Accessing elements in a HTML document using JavaScript.</p>
+              <p class="fragment tight bullet" style="">Modifying the contents of an element.</p>
+              <p class="fragment tight bullet" style=""> Modifying elements.</p>
+              <p class="fragment tight bullet" style="">Adding and deleting elements.</p>
+              <p class="fragment tight bullet" style="">Special DOM objects.</p>
+            </section>
+    <section >
+              <h3>The DOM in general</h3>
+              <p class="small">The Document Object Model is a crossplatform and language neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of HTML, XHTML and XML documents.</p>
+              <img src="assets/week5assets/dom.png"/> </section>
+    <section data-menu-title="Todays lecture" >
+              <h3>Why?</h3>
+              <p>Developers wished to have better integration with HTML and JavaScript. Intention was to add interaction <strong>in various parts of the HTML code</strong>.</p>
+              <p class="fragment tight bullet" style="">Developers used add-hoc ways to add interaction and dynamic behaviour.</p>
+              <p class="fragment tight bullet" style="">For those purposes W3C developed the DOM specification.</p>
+            </section>
+    <section>
+              <h3>Specifications</h3>
+              <p class="fragment tight bullet" style="">Each web document can be treated as a tree structured collection of objects, called the DOM tree</p>
+              <p class="fragment tight bullet" style="">Objects can be accessed and manipulated using methods</p>
+              <p class="fragment tight bullet" style="">The public interface of a DOM is specified by its application programming interface (API).</p>
+            </section>
+    <section  >
+              <h3>What is the DOM</h3>
+            </section>
+    <section >
+              <p>The HTML Document Object Model (DOM):</p>
+              <p class="fragment tight bullet" style="">An API that defines a standard way of accessing and manipulating an HTML document.</p>
+              <p class="fragment tight bullet" style="">It presents a HTML document as a tree-structure (a node tree) with elements, attributes and text.</p>
+              <p class="fragment tight bullet" style="">allows programmers to build documents, navigate their structure, and add, modify, or delete elements and content.</p>
+              <p class="fragment tight bullet" style="">Almost anything found in an HTML document can be accessed, changed, deleted, or added using the DOM (with a few exceptions).</p>
+            </section>
+    <section data-background="#3f3f3f" class="flexbox-container" >
+              <div class="collumn half" >
+        <pre><code class="smallcode">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Untitled Document&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+	&lt;h1&gt;&lt;a href=&quot;&quot;&gt;A heading&lt;/a&gt;&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+						
+					</code></pre>
+      </div>
+              <div class="collumn half"> <img src="assets/week5assets/dom.png"/> </div>
+            </section>
+    <section data-menu-title="finish" data-background-video="assets/week5assets/terminator2red.mp4">
+              <h2>The Dom Wars</h2>
+              <p>There is more than one DOM</p>
+            </section>
+    <section>
+              <p>There are several DOMs in existence:</p>
+              <p class="tight bullet" style=""><strong>The Legacy DOM:</strong> introduced in early versions of JavaScript language.</p>
+              <p class="fragment tight bullet" style="">It is well supported by all browsers, but allows access only to certain key portions of documents, such as forms, form elements, and images.</p>
+            </section>
+            
+            <section>
+
+              <p class="tight bullet" style=""><strong>The IE4 DOM:</strong> This document object model was introduced in Version 4 of Microsoft's Internet Explorer browser.</p>
+              <p class="fragment tight bullet" style="">IE 5 and later versions include support for most basic W3C DOM features.</p>
+            </section>
+            
+             <section>
+              <p class="tight bullet" style=""><strong>The W3C DOM:</strong> allows access and modification of all document content and is standardised by the World Wide Web Consortium (W3C). This model is supported by almost all the modern browsers.</p>
+ 
+            </section>
+            
+             
+            
+            
+    <section data-background="assets/week5assets/tree.jpg" data-background-size="300px" data-background-color="#323232">
+              <h3>DOM4 (Nodes and objects)</h3>
+              <p>Core DOM currently at version 4 and uses Object Oriented concepts.</p>
+              <p class="fragment tight bullet" style="">Objects (encapsulation of data and methods).</p>
+              <p class="fragment tight bullet" style="">Methods (to access or change an object’s state).</p>
+              <p class="fragment tight bullet" style="">Interfaces (declaration of a set of methods).</p>
+              <p class="fragment tight bullet" style="">Each node in the tree is an object.</p>
+              <p class="fragment tight bullet" style="">Root node is the document.</p>
+              <p class="small"><a href="https://www.w3.org/TR/domcore/" target="_blank">DOM4 Specs</a></p>
+            </section>
+    <section>
+              <h3>What are objects?</h3>
+              <p>Objects in JavaScript, just as in many other programming languages, can be compared to objects in real life. The concept of objects in JavaScript can be understood with real life, tangible objects.</p>
+            </section>
+    <section>
+              <h3>What are objects?</h3>
+              <p>In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup, for example. A cup is an object, with properties. A cup has a color, a design, weight, a material it is made of, etc. The same way, JavaScript objects can have properties, which define their characteristics.</p>
+            </section>
+    <section>
+              <h3>What are objects?</h3>
+              <p>The browser is an object</p>
+              <p>The window is an object</p>
+              <p>The head is an object</p>
+              <p>The body is an object</p>
+              <pre><code>
+body.style.color
+			   </code></pre>
+            </section>
+    <section data-menu-title="finish" data-background-video="assets/week5assets/domedit.mp4"> </section>
+    <section data-menu-title="finish" data-background-video="assets/week5assets/stayontarget.mp4">
+              <h3>Targeting elements</h3>
+            </section>
+    <section data-background="#3f3f3f">
+              <h4>Targeting elements in the DOM</h4>
+              <p class="fragment tight bullet" style="">So far we have only "get" or "set" DOM elements by ID</p>
+              <pre><code class="smallcode">
+document.getElementById("id") // get			   	
+document.getElementById("id").value //get input value
+			   			   	
+			   </code></pre>
+
+            </section>
+
+    <section>
+              <h3>Targeting elements in the DOM</h3>
+              <p class="fragment tight bullet" style="">Remember, an id can be defined in each HTML element start tag.</p>
+              <p class="fragment tight bullet" style="">A <code>&lt;div&gt;</code> with an id can be used as a node for a dynamic subtree</p>
+              <p class="fragment tight bullet" style="">A <code>&lt;span&gt;</code> with an id can be used as a dynamic inline element</p>
+              <p class="fragment tight bullet" style="">Accessing nodes by ID is generally the preferred way to access DOM elements with JavaScript</p>
+            </section>
+            
+            
+    <section data-background="#3f3f3f">
+              <h4>Accessing nodes by tag name</h4>
+              <p>Access to elements by their tag name. Typically, we have many elements with the same tag, e.g. <code>&lt;li&gt;</code>, <code>&lt;a&gt;</code> etc.</p>
+              <p class="fragment"><code>document.getElementsByTagName("tag")</code><br>
+        Returns the collection of elements of the specified tag (type)</p>
+              <p class="fragment">The collection has a length attribute</p>
+              <p class="fragment">An item in the collection can be reached by its index, e.g. <code>var x=document.getElementsByTagName("p")[0];</code></p>
+            </section>
+    <section class="flexbox-container" data-background="#3f3f3f">
+              <h4>Accessing elements BY TAG example</h4>
+              <div class="collumn half" >
+        <p class="small">HTML</p>
+        <pre><code class="smallcode">
+&lt;html&gt;
+ &lt;head&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;h1&gt;My form&lt;/h1&gt;
+   &lt;form&gt;
+    ID: &lt;input name=&quot;course&quot; type=&quot;radio&quot; value=&quot;ID&quot;&gt;
+    CS: &lt;input name=&quot;course&quot; type=&quot;radio&quot; value=&quot;CS&quot;&gt;
+    &lt;input type=&quot;button&quot; onclick=&quot;myFunction()&quot; value=&ldquo;Run!&quot;&gt;
+   &lt;/form&gt;
+&lt;/body&gt;		 	
+ 	
+		 </code></pre>
+      </div>
+              <div class="collumn half" >
+        <p class="small">JS</p>
+        <pre><code class="smallcode">
+
+function myFunction()
+{
+var x=document.getElementsByName(“course");
+alert(x.length);
+
+}
+
+		 	</code></pre>
+      </div>
+            </section>
+    <section>
+              <h4>Accessing elements BY name attribute…</h4>
+              <p>Access to elements by their name attribute.</p>
+              <p>Several elements can have the same name (e.g. in forms)</p>
+              <p class="fragment"><code>document.getElementsByName("name")</code><br>
+        Returns the collection of elements of the specified name attribute</p>
+              <p class="fragment">The collection has a length attribute</p>
+              <p class="fragment">An item in the collection can be reached by its index, e.g. <code>var x=document.getElementsByName(“name_attribute_value")[0];</code></p>
+            </section>
+    <section class="flexbox-container" data-background="#3f3f3f">
+              <h4>ACCESSING elements BY attribute name</h4>
+              <div class="collumn half" >
+        <p class="small">HTML</p>
+        <pre><code class="smallcode">
+&lt;html&gt;
+ &lt;head&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;h1&gt;An unordered list:&lt;/h1&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Han&lt;/li&gt;
+    &lt;li&gt;Chewie&lt;/li&gt;
+    &lt;li&gt;Luke&lt;/li&gt;
+  &lt;/ul&gt;
+ &lt;input type=&quot;button&quot; onclick=&ldquo;myFunction()&quot; value=&ldquo;Run!&quot;&gt;
+&lt;/body&gt;		 	
+ 	
+		 </code></pre>
+      </div>
+              <div class="collumn half" >
+        <p class="small">JS</p>
+        <pre><code class="smallcode">
+
+function myFunction()
+{
+var x=document.getElementsByTagName(“li");
+alert(x.length);
+}
+		 	</code></pre>
+      </div>
+            </section>
+            
+    
+            
+    <section>
+              <h4>Traversing the DOM tree (Moving up and down)</h4>
+              <p>Traversal methods include:</p>
+		<p class="fragment">childNodes: returns a collection of child nodes<br>
+Has a length attribute<br>
+ Items can be reached by its index E.g. var body=html.childNodes<strong>[5]</strong>;</p>
+		<p class="fragment tight bullet" style=""><strong>parentNode:</strong> reference to parent node</p>
+		<p class="fragment tight bullet" style=""><strong>firstChild:</strong> first child in list of child nodes</p>
+		<p class="fragment tight bullet" style=""><strong>lastChild:</strong> last child in list of child nodes</p>
+		<p class="fragment tight bullet" style=""><strong>previousSibling:</strong> reference to node preceding this node (if none, returns null)</p>
+		<p class="fragment tight bullet" style=""><strong>nextSibling:</strong> reference to node after this node (if none, returns null)</p>
+		<p class="fragment tight bullet" style=""><strong>hasChildNodes():</strong> true if node has child nodes</p>
+            </section>
+            
+ <section data-background="#3f3f3f">
+<h4>Identifying Elements</h4>
+<img src="assets/week5assets/nodes.png"/>
+	 <pre><code class="smallcode">
+document.getElementsByTagName("h2")[0]
+document.getElementById(“myH2”)
+document.childNodes[0].childNodes[1].childNodes[1].childNodes[1]
+ </code></pre>
+</section>
+ 
+          <section data-background-color="" >
+	<h3>Dynamic Content</h3>
+	<p> Need to name part of the DOM, then swap the text with some new stuff!</p>
+	<p class="fragment"> <strong>innerTEXT </strong>= complete textual content of element.</p>
+	<p class="fragment"> <strong>outerTEXT</strong> = (as above) but also replaces the tag as well when assignment made.</p>
+	<p class="fragment"> <strong>innerHTML</strong> = the complete content (including HTML tags).</p>
+<p class="fragment"> <strong>outerHTML</strong> = complete content including elements itself.</p>
+</section>
+
+<section data-menu-title="get the element meme" data-background="assets/week5assets/element.jpg" data-background-size="400px" data-background-color="#323232">   
+			  </section>
+           
+    <section id="jsexample1" data-state="jsexample1" data-background="#3f3f3f" class="flexbox-container">
+              <h4>Example 1 : modifying content</h4><br>
+              <div class="collumn" >
+        <p class="small">HTML</p>
+        <pre><code class="smallcode">
+&lt;!DOCTYPE html&gt;
+ &lt;html&gt;
+ &lt;body&gt;
+  &lt;h1 id=&quot;heading&quot;&gt;Example 2&lt;/h1&gt;
+  &lt;button id=&quot;mybtn&quot;&gt;Change Heading&lt;/button&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+		 </code></pre>
+      </div>
+              <div class="collumn" >
+        <p class="small">JS</p>
+        <pre><code class="smallcode">
+document.getElementById("myBtn").onclick = changeHeading;
+       
+function changeHeading() {
+var head=document.getElementById("heading");
+var newHead= prompt("enter new header");
+head.innerHTML = newHead;
+}
+		 	</code></pre>
+      </div>
+        <div class="collumn smallcode" >
+        <h4 id="myheading">Example 2</h4>
+<button id="mybtn">Change Heading</button>
+		</div>
+            </section>
+           
+            
+ <section>
+	<h4>Writing to the DOM</h4>
+	 <p> We know how to access elements in the DOM as we are in control of the markup and assigning the relevenat ID's.</p>
+	 <p class="fragment"> What if we want to add new elements?</p>
+	 <p class="fragment"> What if the markup was generated dynamically?</p>
+	 <pre><code> 
+document.write();	 
+	 </code></pre>
+</section>
+ <section data-menu-title="Watch document.write meme" data-background="assets/week5assets/docwrite.jpg" data-background-size="400px" data-background-color="#323232">
+</section>
+
+<section data-background-color="#ff0000" >
+	<h3>Be Careful!</h3>
+	<p><code>Using document.write()</code> after the page has fully loaded will delete all the existing HTML</p>
+</section>
+
+<section data-background-color="" >
+	<h3>Write example 1</h3>
+	<p>Write HTML data to the document.
+	<code>
+document.write(&quot;&lt;h1&gt;Hello World!&lt;/h1&gt;&rdquo;);
+		</code>
+		</p>
+<p class="fragment">Write date from a function to the document.<br>
+<code>
+document.write(Date());
+</code>
+	</p>
+</section>
+
+<section data-background-color="" >
+	<h3>Write example 2</h3>
+	<p>
+Open a new window and add HTML to it.<br>
+<code>
+var newWindow = window.open("", "newWindow", "width=50, height=50");
+newWindow.document.write(&quot;&lt;p&gt;This is a new window!&lt;/p&gt;&rdquo;);
+		</code></p>
+		<p class="fragment small">
+write() and writeln() are VERY different.<br>
+writln() is used when you want to add a new line after each statement.</p>
+</section>
+
+
+<section data-background-color="" >
+	<h3>loops (will continue Thursday)</h3>
+	<pre>
+<code class="smallcode">
+
+	window.onload = function()
+{
+  
+var docWidth = window.innerWidth;
+var docHeight =  window.innerHeight;
+var x =0;
+var output-&quot;&quot;;
+
+	while(x*width &lt; docWidth)
+	{
+		var y =0;
+		while(y*height &lt; docHeight)
+		{
+			console.log(x,y);
+		}
+		//
+		x++;
+	}
+}
+		</code></pre>
+		
+</section>
+
+           
+           <section data-menu-title="next session" data-background="">
+              <h3>Thursdays Session</h3>
+              <p class="" style="">This week you will be working on a new exercise “body swap”. Which will help develop:</p>
+               <p class="fragment" style="">DOM Skills</p>
+               <p class="fragment" style="">Accessing Arrays[]</p>
+               <p class="fragment" style="">loops</p>
+               <p class="fragment" style="">Writing to the DOM</p>
+
+            </section>
+            
+    <section data-menu-title="finish" data-background="">
+              <h2>BOOM!</h2>
+            </section>
+  </div>
+        </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="lib/js/head.min.js"></script> 
+<script src="js/reveal.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="https://code.highcharts.com/highcharts.js"></script> 
+<script src="https://code.highcharts.com/highcharts-more.js"></script> 
+<script src="https://code.highcharts.com/modules/solid-gauge.js"></script> 
+<script src="js/themes/mypbtheme.js"></script> 
+<script src="js/jquery.animateNumber.min.js"></script> 
+<script src="js/main.js"></script> 
+<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+</body>
+</html>

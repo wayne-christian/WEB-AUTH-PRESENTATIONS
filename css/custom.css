@@ -80,6 +80,9 @@ p.tight{margin: 0;
 .reveal section img {
 	box-shadow: none!important;
 	max-width: 50%;
+	margin: 0;
+    background: transparent;
+    border: none;
 }
 .PDS_Poll{
     left: 50%!important;
@@ -168,4 +171,16 @@ p.tight{margin: 0;
 .exwrapper .sidebar2 {
   background-color: #ccc;
   color: #444;
+}
+div.half{
+width: 50%;
+}
+.reveal h1, .reveal h2, .reveal h3,.reveal  h4{
+	text-transform: capitalize;
+}
+
+.reveal .smallcode{
+	font-size: 50%;
+	line-height: normal;
+	
 }

@@ -1,6 +1,23 @@
 // More info about config & dependencies:
 // - https://github.com/hakimel/reveal.js#configuration
 // - https://github.com/hakimel/reveal.js#dependencies
+
+var backcolors = ['red', 'green', 'blue', 'orange', 'yellow'];
+
+$(document).ready(function () {
+	console.log('ready');
+	$('section').each(function(){
+		if(!$(this).hasClass('code')){
+			var ran= backcolors[Math.floor((Math.random() * 4) + 1)];
+			console.log('section found', ran);
+       $(this).data('background',ran );
+		
+	}
+    });
+});
+
+
+
 Reveal.initialize({
 	controls: true,
 	progress: true,
@@ -62,8 +79,21 @@ Reveal.initialize({
 	}
 });
 
-Reveal.addEventListener('salary', function () {
-	console.log('stats called!');
+Reveal.addEventListener( 'ready', function( event ) {
+	console.log('reveal loaded');
+} );
+
+Reveal.addEventListener('jsexample1', function () {
+	console.log('jsexample1 called!');
+	$( "#jsexample1 #mybtn").unbind( "click" );
+	$("#jsexample1 #mybtn").click(changeHeading);
+       
+function changeHeading() {
+var ex1 = $("#jsexample1 #myheading");
+var newHead= prompt("enter new header");
+ex1.text(newHead);
+}
+	
 });
 
 var entityMap = {
@@ -83,11 +113,7 @@ function escapeHtml(string) {
 	});
 }
 
-$(document).ready(function () {
-	console.log('ready');
-	/*$( "code" ).each(function( index ) {
-		console.log($( this ).html());
-	 //escapeHtml($( this ).html() );
-		
-	});*/
-});
+
+
+
+
