@@ -114,6 +114,47 @@ function escapeHtml(string) {
 }
 
 
+Reveal.addEventListener('pie', function () {
+Highcharts.chart('container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: '% of cant be arsed!'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: false
+            },
+            showInLegend: true
+        }
+    },
+    series: [{
+        name: 'types',
+        colorByPoint: true,
+        data: [{
+            name: 'Good Students (147)',
+            y: 147
+        }, {
+            name: 'I struggle with simple instructions (66)',
+            y: 66,
+            sliced: true,
+            selected: true
+        }]
+    }]
+});
+	
+});
+
 
 
 
