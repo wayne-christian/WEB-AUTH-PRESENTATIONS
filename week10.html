@@ -1,0 +1,274 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Week 10: JQUERY (Drag and drop)</title>
+<link rel="stylesheet" href="css/reveal.css">
+<link rel="stylesheet" href="css/theme/night.css">
+
+<!-- Theme used for syntax highlighting of code -->
+<link rel="stylesheet" href="lib/css/zenburn.css">
+<link rel="stylesheet" href="css/custom.css">
+
+<!-- Printing and PDF exports -->
+<script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+</head>
+<body>
+
+<div class="reveal">
+  <div class="slides">
+    <section data-background-transition="convex" data-background="#333333">
+      <h2 >Hello</h2>
+      <p style="color:#F8AA00">(Web Authoring CMP1130M)</p>
+    </section>
+    <section data-background-transition="convex" data-background-video="assets/week1assets/rainingcode.mp4" data-background-video-loop="loop">
+      <h3 >Wayne Christian</h3>
+      <p style="color:#F8AA00">Designer, Developer, Director & Senior Lecturer</p>
+    </section>
+    <section data-menu-title="stickie 1" data-background-transition="convex">
+      <p><img src="assets/week5assets/img1.JPG"/></p>
+    </section>
+    
+    <section data-menu-title="stickie 1" data-background-transition="convex">
+      <p><img src="assets/week9assets/post4.JPG"/></p>
+      
+      
+    </section>
+    
+    <section data-menu-title="stickie 1" data-background-transition="convex">
+      <p><img src="assets/week9assets/post7.JPG"/></p>
+    </section>
+    
+    <section data-menu-title="stickie 1" data-background-transition="convex">
+      <p><img src="assets/week9assets/post1.JPG"/></p>
+    </section>
+    
+    <section data-menu-title="stickie 1" data-background-transition="convex">
+      <p><img src="assets/week9assets/post2.JPG"/></p>
+    </section>
+    
+    <section data-menu-title="stickie 1" data-background-transition="convex">
+      <p><img src="assets/week9assets/post3.JPG"/></p>
+    </section>
+    
+     
+    
+     <section data-menu-title="stickie 1" data-background-transition="convex">
+      <p><img src="assets/week9assets/post7.JPG"/></p>
+    </section>
+    
+    
+    <section data-menu-title="stickie 1" data-background-transition="convex">
+      <p><img src="assets/week9assets/post9.JPG"/></p>
+    </section>
+    
+    <section data-menu-title="stickie 1" data-background-transition="convex">
+      <p><img src="assets/week9assets/post10.JPG"/></p>
+    </section>
+    
+    <section data-menu-title="stickie 1" data-background-transition="convex">
+      <p><img src="assets/week9assets/post11.JPG"/></p>
+    </section>
+    
+    <section data-menu-title="stickie 1" data-background-transition="convex">
+      <p><img src="assets/week9assets/post12.JPG"/></p>
+    </section>
+    <section data-menu-title="stickie 1" data-background-transition="convex">
+      <p><img src="assets/week9assets/post13.JPG"/></p>
+    </section>
+    
+    <section data-menu-title="stickie 1" data-background-transition="convex">
+      <p><img src="assets/week9assets/post14.JPG"/></p>
+    </section>
+
+  <section data-menu-title="stickie 1" data-background-transition="convex">
+      <p><img src="assets/week9assets/post15.JPG"/></p>
+    </section>
+   
+   <section data-menu-title="stickie 1" data-background-transition="convex">
+      <p><img src="assets/week9assets/post16.JPG"/></p>
+    </section>
+    
+    
+    <section data-menu-title="social" data-background-transition="convex" data-background="assets/week4assets/home.jpg">
+      <h4>First Web Auth Social
+        (Some awards, showcases etc)</h4>
+      <h3>Home Night Club
+        Thursday 14th December(Week 12)</h3>
+      <h2>6.30 - 9.00</h2>
+      <h3>Student Deals!</h3>
+    </section>
+
+
+    
+    <section data-menu-title="slide1" data-background="assets/week9assets/jquery1.png" data-background-size="900px" data-background-color="#222222"></section>
+     <section data-menu-title="slide2" data-background="assets/week9assets/jquery2.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery3.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery4.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery5.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery6.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery7.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery8.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery9.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery10.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery11.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery12.png" data-background-size="900px" data-background-color="#222222"></section>
+     <section >
+             <h3>Use the Console!</h3>
+              <p style="">if I have one more person ask...</p>
+            </section>
+            
+            <section data-background-transition="convex" data-background-video="assets/week9assets/console.mp4" >
+              <h3 style="color:#222">FFS!</h3>
+            </section>
+      <section data-background="assets/week9assets/jquery14.png" data-background-size="900px" data-background-color="#222222"></section>
+  
+      <section data-menu-title="example 1" data-background-iframe="https://lines.chromeexperiments.com/" data-background-interactive> </section>
+      <section data-menu-title="example 1" data-background-iframe="https://www.bugaboo.com/GB/en_GB/strollers/bugaboo-bee5" data-background-interactive> </section>
+       <section data-menu-title="example 1" data-background-iframe="https://aiaiai.dk/configurator" data-background-interactive> </section>
+       <section data-menu-title="example 1" data-background-iframe="https://www.etq-amsterdam.com/" data-background-interactive> </section>
+         
+
+      <section data-background="assets/week9assets/jquery20.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery21.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery22.png" data-background-size="900px" data-background-color="#222222"></section>
+     <section data-menu-title="example 1" data-background-iframe="http://hotdot.pro/#" data-background-interactive> </section>
+      <section data-menu-title="example 1" data-background-iframe="http://johnpolacek.github.io/superscrollorama/" data-background-interactive> </section>
+      <section data-menu-title="example 1" data-background-iframe="http://joelb.me/scrollpath/" data-background-interactive> </section>
+      <section data-menu-title="example 1" data-background-iframe="http://ksylvest.github.io/jquery-gridly/" data-background-interactive> </section>
+      <section data-menu-title="example 1" data-background-iframe="http://interactivedesignlincoln.co.uk/" data-background-interactive> </section>
+      <section data-menu-title="example 1" data-background-iframe="https://demo.tutorialzine.com/2011/09/shuffle-letters-effect-jquery/" data-background-interactive> </section>     
+      <section data-menu-title="example 1" data-background-iframe="https://tympanus.net/Development/ElasticStack/" data-background-interactive> </section>
+      <section data-background-transition="convex" data-background-video="https://assets.awwwards.com/awards/external/2017/08/59a0170ac3d0c.mp4" data-background-video-loop="loop">
+              <h3 style="color:#222">Jquery (Drag and Drop)</h3>
+              <p style="color:#222">& multidimensional arrays!</p>
+            </section>
+      <section data-background-color="#222222">
+		  <h3>Quick examples</h3>
+      </section>
+               <section data-menu-title="example 1" data-background-iframe="https://www.etq-amsterdam.com/" data-background-interactive> </section>
+         <section data-menu-title="example 1" data-background-iframe="https://inculerate.com/" data-background-interactive> </section>
+         <section data-menu-title="example 1" data-background-iframe="http://www.ibuongiorno.com/" data-background-interactive> </section>
+         <section data-menu-title="example 1" data-background-iframe="http://2017.makemepulse.com/" data-background-interactive> </section>
+         <section data-menu-title="example 1" data-background-iframe="https://immersive-g.com/wishes-2017/" data-background-interactive> </section>
+     
+      <section data-background="assets/week9assets/jquery32.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery33.png" data-background-size="900px" data-background-color="#222222"></section>
+     
+	  
+       <section data-menu-title="coding steps" data-background-transition="convex" data-background="">
+		   <p>Coding Steps</p>
+      <p class="fragment tight bullet small" style="">Add Jquery</p>
+      <p class="fragment tight bullet small" style="">Add dependencies (jquery easy ui and css files).</p>
+      <p class="fragment tight bullet small" style="">Build HTML Structure.</p>
+      <p class="fragment tight bullet small" style="">Develop CSS styles</p>
+      <p class="fragment tight bullet small" style="">Add jquery doc ready function</p>
+      <p class="fragment tight bullet small" style="">Target elements with jquery syntax</p>
+      <p class="fragment tight bullet small" style="">Add drag-able and drop-able functions</p>
+      <p class="fragment tight bullet small" style="">Set UI options (parameters)</p>
+         <p class="fragment tight bullet small" style="">Get dropped item data and store in array</p>
+            <p class="fragment tight bullet small" style="">Loop through Array and add Product to a data grid (list)</p>
+               <p class="fragment tight bullet small" style="">Check to see if the item is in the list</p>
+          <p class="fragment tight bullet small" style="">Do some maths!</p>
+          <p class="fragment tight bullet small" style="">Update price HTML element!</p>
+    </section>
+     
+      <section data-background="assets/week9assets/jquery35.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery36.png" data-background-size="cover" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery37.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery38.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery39.png" data-background-size="900px" data-background-color="#222222"></section>
+      
+      <section data-menu-title="coding steps" data-background-transition="convex" data-background="#3f3f3f">
+		   <p>travesring the dom actions</p>
+		  <pre class="" style="">
+		  <code>
+$(this).parents('.holder').show(); // go up until you find class holder
+$(this).find('#findme').show(); // find id with "findme" inside the referent.
+$(this).child().show();	 
+		  </code></pre>
+		  <a class="small" href="https://api.jquery.com/category/traversing/" target="_blank">More on traversing in jquery</a>
+	  </section>
+     
+     <section data-menu-title="coding steps" data-background-transition="convex" data-background="#3f3f3f">
+		   <p>You can append actions (chaining)</p>
+		  <pre class="" style="">
+		  <code>
+$(this).find('#findme').delay(1000).fadeIn(1000);
+	 
+		  </code></pre>
+	  </section>
+      
+      <section data-background="assets/week9assets/jquery40.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery41.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery42.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery43.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery44.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery45.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery46.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery47.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery48.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery49.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery50.png" data-background-size="900px" data-background-color="#222222"></section>
+      
+      <section data-menu-title="" data-background-transition="convex" data-background="#3f3f3f">
+		   <p>Note anonymous function again!</p>
+		  <pre class="" style="">
+		  <code>onStartDrag:function()
+{
+//Do something gwhen start drag is triggered
+}</code></pre>
+	  </section>
+      <section data-menu-title="start drag" data-background="assets/week9assets/jquery51.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery52.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery53.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-menu-title="get source" data-background="assets/week9assets/jquery54.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery55.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery56.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery57.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery58.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery59.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery60.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery61.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery62.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery63.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery64.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery65.png" data-background-size="900px" data-background-color="#222222"></section>
+      <section data-background="assets/week9assets/jquery66.png" data-background-size="900px" data-background-color="#222222"></section>
+
+      
+    <section data-menu-title="next session" data-background="">
+      <h3>Thursdays Session</h3>
+      <p class="" style="">Doing the above!</p>
+    </section>
+    <section data-menu-title="finish" data-background="">
+      <h2>BOOM!</h2>
+    </section>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="lib/js/head.min.js"></script> 
+<script src="js/reveal.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="https://code.highcharts.com/highcharts.js"></script> 
+<script src="https://code.highcharts.com/highcharts-more.js"></script> 
+<script src="https://code.highcharts.com/modules/solid-gauge.js"></script> 
+<script src="js/themes/mypbtheme.js"></script> 
+<script src="js/jquery.animateNumber.min.js"></script> 
+<script src="js/main.js"></script> 
+<script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+</body>
+</html>
