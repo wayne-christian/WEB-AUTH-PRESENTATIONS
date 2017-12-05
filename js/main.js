@@ -3,17 +3,27 @@
 // - https://github.com/hakimel/reveal.js#dependencies
 
 var backcolors = ['red', 'green', 'blue', 'orange', 'yellow'];
+var sections ='';
+		
+		for(i = 0; i < 49; i++){
+			console.log(i);
+			sections += '<section data-menu-title="slide'+i+'" data-background="assets/week10assets/ls'+i+'.jpg" data-background-size="900px" data-background-color="#1b1b1b"></section>'
+		}
+
 
 $(document).ready(function () {
-	console.log('ready');
-	$('section').each(function(){
+	console.log('ready',sections);
+	/*$('section').each(function(){
 		if(!$(this).hasClass('code')){
 			var ran= backcolors[Math.floor((Math.random() * 4) + 1)];
 			console.log('section found', ran);
        $(this).data('background',ran );
 		
 	}
-    });
+    });*/
+	
+
+		
 });
 
 
@@ -96,6 +106,7 @@ ex1.text(newHead);
 	
 });
 
+
 var entityMap = {
 	'&': '&amp;',
 	'<': '&lt;',
@@ -155,6 +166,8 @@ Highcharts.chart('container', {
 	
 });
 
-
+Reveal.addEventListener( 'sound', function( event ) {
+	console.log('reveal loaded');
+} );
 
 
