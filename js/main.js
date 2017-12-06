@@ -6,7 +6,7 @@ var backcolors = ['red', 'green', 'blue', 'orange', 'yellow'];
 var sections ='';
 		
 		for(i = 0; i < 49; i++){
-			console.log(i);
+			//console.log(i);
 			sections += '<section data-menu-title="slide'+i+'" data-background="assets/week10assets/ls'+i+'.jpg" data-background-size="900px" data-background-color="#1b1b1b"></section>'
 		}
 
@@ -166,8 +166,5 @@ Highcharts.chart('container', {
 	
 });
 
-Reveal.addEventListener( 'sound', function( event ) {
-	console.log('reveal loaded');
-} );
 
 
