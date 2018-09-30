@@ -28,6 +28,8 @@ $(document).ready(function () {
 
 
 
+
+
 Reveal.initialize({
 	controls: true,
 	progress: true,
@@ -85,13 +87,16 @@ Reveal.initialize({
 		side: 'left',
 		transitions: false,
 		themes: false,
-		slides: false
+		slides: false,
+		keyboard: false
 	}
 });
+
 
 Reveal.addEventListener( 'ready', function( event ) {
 	console.log('reveal loaded');
 } );
+
 
 Reveal.addEventListener('jsexample1', function () {
 	console.log('jsexample1 called!');
