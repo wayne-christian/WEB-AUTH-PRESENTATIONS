@@ -191,3 +191,8 @@ position: absolute;
     top: 50%;
     transform: translate(-50%,-50%);
 }
+@media only screen and (max-width: 800px) {
+   .reveal #myElement8 p.mq {
+  background-color: red;
+  }
+}
