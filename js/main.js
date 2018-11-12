@@ -139,7 +139,7 @@ Highcharts.chart('container', {
         type: 'pie'
     },
     title: {
-        text: '% of cant be arsed!'
+        text: '% of burning money'
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -158,10 +158,10 @@ Highcharts.chart('container', {
         name: 'types',
         colorByPoint: true,
         data: [{
-            name: 'Good Students (147)',
-            y: 147
+            name: 'Interested Students',
+            y: 33
         }, {
-            name: 'I struggle with simple instructions (66)',
+            name: 'I dont need any help, ill stay in my room and hope I am right',
             y: 66,
             sliced: true,
             selected: true
