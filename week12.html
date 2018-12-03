@@ -271,7 +271,7 @@ data-track=&quot;' + track + '&quot; id=&quot;' + id + '&quot;  class=&quot;cove
     </section>
     <section data-menu-title="bx" data-background="#3f3f3f">
       <p>Add some CSS Styling for drop menu</p>
-      <pre><code style="font-size: 50%; line-height: normal"> 
+      <pre><code style="font-size: 50%; line-height: normal" data-noescape data-trim> 
 
 /*the drop down css is from week 4 with the following addition*/
 /*What does this do?*/
@@ -287,8 +287,8 @@ nav ul ul {
     </section>
     <section data-menu-title="bx" data-background="#3f3f3f">
       <p>Add some CSS Hover to show name</p>
-      <pre><code style="font-size: 50%; line-height: normal"> 		 
-<div id="' + id + '" class="hover_name"><h3>' + name + '</h3></div>
+      <pre><code style="font-size: 50%; line-height: normal" data-noescape data-trim> 		 
+&lt;div id=&quot;' + id + '&quot; class=&quot;hover_name&quot;&gt;&lt;h3&gt;' + name + '&lt;/h3&gt;&lt;/div&gt;
 
 /*SHOW AN OVERLAY IN THE BOX BUT HIDDEN*/
 .hover_name{
@@ -299,7 +299,7 @@ nav ul ul {
     background-color: rgba(0,0,0,.5);
 	display: none;
  <mark>
- animation: 1s ease 0s normal forwards 1 fadein;
+ 	animation: 1s ease 0s normal forwards 1 fadein;
  </mark>
 }
 
