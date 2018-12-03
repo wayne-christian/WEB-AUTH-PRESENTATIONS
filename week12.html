@@ -106,7 +106,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
     </section>
     <section data-menu-title="" data-background="#3f3f3f">
       <p>Basics</p>
-      <pre><code data-noescape style="font-size: 50%; line-height: normal"> 
+      <pre><code style="font-size: 50%; line-height: normal"> 
 <!--custom css styles for handling our spotify images and additional styles-->
 &lt;link href=&quot;https://fonts.googleapis.com/css?family=Montserrat&quot; rel=&quot;stylesheet&quot;&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-2.2.2.min.js&quot;&gt;&lt;/script&gt;
@@ -116,7 +116,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
     </section>
     <section data-menu-title="" data-background="#3f3f3f">
       <p>HTML structure (Create a Nav)</p>
-      <pre><code data-noescape style="font-size: 50%; line-height: normal"> 
+      <pre><code style="font-size: 50%; line-height: normal"> 
 <!--ADD NAV-->
 <nav id="main_nav">
     <ul id="menu">
@@ -131,7 +131,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
     </section>
     <section data-menu-title="" data-background="#3f3f3f">
       <p>HTML structure (Create Content / albums)</p>
-      <pre><code data-noescape style="font-size: 50%; line-height: normal"> 
+      <pre><code style="font-size: 50%; line-height: normal"> 
 
   <div id="content">
     <h1>Foo Fighters from Spotify</h1>
@@ -152,8 +152,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
     </section>
     <section data-menu-title="" data-background="#3f3f3f">
       <p>Modified Json</p>
-      <pre><code data-noescape style="font-size: 50%; line-height: normal"> 
-      
+      <pre><code style="font-size: 50%; line-height: normal">      
 var spotifyjson;
 
 //snippit	  	
@@ -165,14 +164,14 @@ var spotifyjson;
     </section>
     <section data-menu-title="" data-background="#3f3f3f">
       <p>Convert JSON string to JS Objects</p>
-      <pre><code data-noescape style="font-size: 50%; line-height: normal"> 
+      <pre><code style="font-size: 50%; line-height: normal"> 
 //data will be converted to objects
 var data = JSON.parse(spotifyjson);
 </code></pre>
     </section>
     <section data-menu-title="" data-background="#3f3f3f">
       <p>Wait for page to load and get albums</p>
-      <pre><code data-noescape style="font-size: 50%; line-height: normal"> 
+      <pre><code style="font-size: 50%; line-height: normal"> 
 $(document).ready(function () {
 	console.log('ready', data);
 	searchAlbums();
@@ -182,7 +181,7 @@ $(document).ready(function () {
     </section>
     <section data-menu-title="" data-background="#3f3f3f">
       <p>search function</p>
-      <pre><code data-noescape style="font-size: 50%; line-height: normal"> 
+      <pre><code style="font-size: 50%; line-height: normal"> 
 var searchAlbums = function () {
 // GET ONLY THE PARTS OF THE ARRAY WE NEED (SPOTIFY JSON IS VERBOSE).
 	var items = data.albums.items;
@@ -195,7 +194,7 @@ var searchAlbums = function () {
 
     <section data-menu-title="" data-background="#3f3f3f">
       <p>jQuery.each( object/ARRAY, callback )</p>
-      <pre><code data-noescape style="font-size: 50%; line-height: normal"> 
+      <pre><code style="font-size: 50%; line-height: normal"> 
 <mark>what is the index?</mark>
 $.each(items, function (index) {
 
@@ -215,7 +214,7 @@ $.each(items, function (index) {
     </section>
     <section data-menu-title="" data-background="#3f3f3f">
       <p>In each item - Concatenate to create html structure</p>
-      <pre><code data-noescape style="font-size: 50%; line-height: normal"> 
+      <pre><code style="font-size: 50%; line-height: normal"> 
 //ADD NAMES TO A MENU SO WE CAN ADD SOME SCROLL ANIMATIONS TO CONTENT
 menu += '<li><a href="' + id + '">' + name + '</a></li>';
 
@@ -223,20 +222,20 @@ menu += '<li><a href="' + id + '">' + name + '</a></li>';
     </section>
     <section data-menu-title="" data-background="#3f3f3f">
       <p>In each item - Concatenate to create html structure</p>
-      <pre><code data-noescape style="font-size: 50%; line-height: normal"> 
+      <pre><code style="font-size: 50%; line-height: normal"> 
 //add the vars into a large string we can holding all the html we need
 //there are alternative ways to do this via append() etc
 // notice we add a unique background image with an inline style - the rest is positioned by css
 //note the class="cover".
-resultsintohtml += '<div style="background-image:url(' + image + ')" 
-data-track="' + track + '" id="' + id + '"  class="cover">
-<div id="' + id + '" class="hover_name">
-<h3>' + name + '</h3></div></div>';
+resultsintohtml += '&lt;div style=&quot;background-image:url(' + image + ')&quot; 
+data-track=&quot;' + track + '&quot; id=&quot;' + id + '&quot;  class=&quot;cover&quot;&gt;
+&lt;div id=&quot;' + id + '&quot; class=&quot;hover_name&quot;&gt;
+&lt;h3&gt;' + name + '&lt;/h3&gt;&lt;/div&gt;&lt;/div&gt;';
 </code></pre>
     </section>
     <section data-menu-title="" data-background="#3f3f3f">
       <p>Add HTML to our place holders</p>
-      <pre><code data-noescape style="font-size: 50%; line-height: normal"> 
+      <pre><code style="font-size: 50%; line-height: normal"> 
 // insert it into the results div via the html() method;
 	$('#results').html(resultsintohtml);
 	$('#main_menu_holder').html(menu);
@@ -251,7 +250,7 @@ data-track="' + track + '" id="' + id + '"  class="cover">
     </section>
     <section data-menu-title="bx" data-background="#3f3f3f">
       <p>Add some CSS Styling as we go</p>
-      <pre><code data-noescape style="font-size: 50%; line-height: normal"> 
+      <pre><code style="font-size: 50%; line-height: normal"> 
 
 /*what are we doing here?*/
 .cover {
@@ -272,7 +271,7 @@ data-track="' + track + '" id="' + id + '"  class="cover">
     </section>
     <section data-menu-title="bx" data-background="#3f3f3f">
       <p>Add some CSS Styling for drop menu</p>
-      <pre><code data-noescape style="font-size: 50%; line-height: normal"> 
+      <pre><code style="font-size: 50%; line-height: normal"> 
 
 /*the drop down css is from week 4 with the following addition*/
 /*What does this do?*/
@@ -288,7 +287,7 @@ nav ul ul {
     </section>
     <section data-menu-title="bx" data-background="#3f3f3f">
       <p>Add some CSS Hover to show name</p>
-      <pre><code data-noescape style="font-size: 50%; line-height: normal"> 		 
+      <pre><code style="font-size: 50%; line-height: normal"> 		 
 <div id="' + id + '" class="hover_name"><h3>' + name + '</h3></div>
 
 /*SHOW AN OVERLAY IN THE BOX BUT HIDDEN*/
@@ -308,7 +307,7 @@ nav ul ul {
     </section>
     <section data-menu-title="bx" data-background="#3f3f3f">
       <p>CSS Animation</p>
-      <pre><code data-noescape style="font-size: 50%; line-height: normal"> 
+      <pre><code style="font-size: 50%; line-height: normal"> 
 /*Add a fade in animation*/
 
 @keyframes fadein{
@@ -326,9 +325,9 @@ nav ul ul {
     </section>
     <section data-menu-title="bx" data-background="#3f3f3f">
       <p>Add some CSS Hover to show name</p>
-      <pre><code data-noescape style="font-size: 50%; line-height: normal"> 
+      <pre><code style="font-size: 50%; line-height: normal"> 
 		 
-<div id="' + id + '" class="hover_name"><h3>' + name + '</h3></div>
+&lt;div id=&quot;' + id + '&quot; class=&quot;hover_name&quot;&gt;&lt;h3&gt;' + name + '&lt;/h3&gt;&lt;/div&gt;
 
 .hover_name h3{
 	text-align: center;
@@ -349,7 +348,7 @@ nav ul ul {
     
     <section data-menu-title="" data-background="#3f3f3f">
       <p>Add interaction after adding new elements to the DOM</p>
-      <pre><code data-noescape style="font-size: 50%; line-height: normal"> 
+      <pre><code style="font-size: 50%; line-height: normal"> 
 	// this is after the $.each function
 	// call a new function that applies new click events.
 	// why?
@@ -358,7 +357,7 @@ nav ul ul {
     </section>
     <section data-menu-title="" data-background="#3f3f3f">
       <p>Add interaction after adding new elements to the DOM</p>
-      <pre><code data-noescape style="font-size: 60%; line-height: normal"> 
+      <pre><code style="font-size: 60%; line-height: normal"> 
 var addclickevents = function () {
 // add scroll to function using animate and offset.top
 //The offset() method set or returns the offset coordinates for the selected elements, relative to the document.
@@ -379,7 +378,7 @@ $('#main_menu_holder li a').click(function (e) {
     </section>
     <section data-menu-title="" data-background="#3f3f3f">
       <p>add click to play 30 second mp3 from spotify</p>
-      <pre><code data-noescape style="font-size: 60%; line-height: normal"> 
+      <pre><code style="font-size: 60%; line-height: normal"> 
 $('.cover').click(function (e) {
 	e.preventDefault();
 	console.log('get song');
@@ -395,7 +394,7 @@ $('.cover').click(function (e) {
     </section>
     <section data-menu-title="" data-background="#3f3f3f">
       <p>Condition to check if playing</p>
-      <pre><code data-noescape style="font-size: 50%; line-height: normal"> 
+      <pre><code style="font-size: 50%; line-height: normal"> 
 
 if (target.hasClass('playing')) {
 	audioObject.pause();
@@ -417,7 +416,7 @@ if (target.hasClass('playing')) {
     </section>
     <section data-menu-title="" data-background="#3f3f3f">
       <p>Additional sound events</p>
-      <pre><code data-noescape style="font-size: 50%; line-height: normal"> 
+      <pre><code style="font-size: 50%; line-height: normal"> 
 // listen for audio to end and remove the highlight class
 audioObject.addEventListener('ended', function () {
 target.removeClass('playing');
@@ -431,7 +430,7 @@ target.removeClass('playing');
     </section>
     <section data-menu-title="" data-background="#3f3f3f">
       <p>Css for Playing</p>
-      <pre><code data-noescape style="font-size: 50%; line-height: normal"> 
+      <pre><code style="font-size: 50%; line-height: normal"> 
 /*class added if audio playing from JQ*/
 
 .cover.playing {
@@ -444,7 +443,7 @@ target.removeClass('playing');
       <p>Sticky Nav</p>
       <div class="collumn">
         <p>HTML</p>
-        <pre><code data-noescape  style="font-size: 40%; line-height: normal">
+        <pre><code  style="font-size: 40%; line-height: normal">
 &lt;div class='header'&gt;Header&lt;/div&gt;
 &lt;div class='nav'&gt;Navigation&lt;/div&gt;
 </code>
@@ -452,7 +451,7 @@ target.removeClass('playing');
       </div>
       <div class="collumn">
         <p>CSS</p>
-        <pre><code data-noescape  style="font-size: 30%; line-height: normal">
+        <pre><code  style="font-size: 30%; line-height: normal">
 .header {
   width: 100%;
   height: 100px;
@@ -476,7 +475,7 @@ target.removeClass('playing');
       </div>
       <div class="collumn">
         <p>js</p>
-        <pre><code data-noescape  style="font-size: 30%; line-height: normal">
+        <pre><code  style="font-size: 30%; line-height: normal">
 var yourNavigation = $(".nav");
 yourHeader = $('.header').height();
 
@@ -495,7 +494,7 @@ $(window).scroll(function() {
       <p>CSS Animation</p>
       <div class="collumn">
         <p>HTML</p>
-        <pre><code data-noescape  style="font-size: 40%; line-height: normal">
+        <pre><code  style="font-size: 40%; line-height: normal">
 &lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; This example does not work in Internet Explorer 9 and earlier versions.&lt;/p&gt;
 
 &lt;div class-&quot;ani&quot;&gt;&lt;/div&gt;
@@ -504,7 +503,7 @@ $(window).scroll(function() {
       </div>
       <div class="collumn">
         <p>CSS</p>
-        <pre><code data-noescape  style="font-size: 30%; line-height: normal">
+        <pre><code  style="font-size: 30%; line-height: normal">
 /* The animation code */
 @keyframes example {
     0%   {background-color: red;}
