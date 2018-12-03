@@ -11,8 +11,8 @@ var sections ='';
 		}
 
 
-$(document).ready(function () {
-	console.log('ready',sections);
+//$(document).ready(function () {
+	//console.log('ready',sections);
 	/*$('section').each(function(){
 		if(!$(this).hasClass('code')){
 			var ran= backcolors[Math.floor((Math.random() * 4) + 1)];
@@ -24,7 +24,7 @@ $(document).ready(function () {
 	
 
 		
-});
+//});
 
 
 
