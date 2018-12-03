@@ -184,10 +184,10 @@ $(document).ready(function () {
       <pre><code style="font-size: 50%; line-height: normal"> 
 var searchAlbums = function () {
 // GET ONLY THE PARTS OF THE ARRAY WE NEED (SPOTIFY JSON IS VERBOSE).
-	var items = data.albums.items;
+var items = data.albums.items;
 // create empty string so no comparison issues
-	var resultsintohtml = '';
-	var menu = '';
+var resultsintohtml = '';
+var menu = '';
 };
 </code></pre>
     </section>
@@ -198,17 +198,17 @@ var searchAlbums = function () {
 <mark>what is the index?</mark>
 $.each(items, function (index) {
 
-	// get the ID from the items array for menu see next slide why
-	var id = items[index].id;
-	
-	// get the name from the items array
-	var name = items[index].name;
-	
-	//get track url (mp3)
-	var track = items[index].track;
-	
-	// get the 2nd (bigger size )image from the items array - note this is a nested array
-	var image = items[index].images[1].url;
+// get the ID from the items array for menu see next slide why
+var id = items[index].id;
+
+// get the name from the items array
+var name = items[index].name;
+
+//get track url (mp3)
+var track = items[index].track;
+
+// get the 2nd (bigger size )image from the items array - note this is a nested array
+var image = items[index].images[1].url;
 });
 </code></pre>
     </section>
@@ -216,7 +216,7 @@ $.each(items, function (index) {
       <p>In each item - Concatenate to create html structure</p>
       <pre><code style="font-size: 50%; line-height: normal"> 
 //ADD NAMES TO A MENU SO WE CAN ADD SOME SCROLL ANIMATIONS TO CONTENT
-menu += '<li><a href="' + id + '">' + name + '</a></li>';
+menu += '&lt;li&gt;&lt;a href=&quot;' + id + '&quot;&gt;' + name + '&lt;/a&gt;&lt;/li&gt;';
 
 </code></pre>
     </section>
@@ -258,13 +258,13 @@ data-track=&quot;' + track + '&quot; id=&quot;' + id + '&quot;  class=&quot;cove
     height: 25vw;
     display: inline-block;
     background-size: cover;
-/* note the transition */   
+	/* note the transition */   
 	transition: 0.5s;    
 }
 /*over the cover image*/
 .cover:hover {
     cursor: pointer;
-	 outline: 8px solid #fff;
+	outline: 8px solid #fff;
 	outline-offset: -8px;
 }
 </code></pre>
